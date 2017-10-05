@@ -2,3 +2,10 @@ h1 {
   text-align: center;
   color: blue;
 }
+#p1 {
+  display: block;
+  margin: 0 auto;
+}
+#p3 {
+  margin-right: 50px
+}
