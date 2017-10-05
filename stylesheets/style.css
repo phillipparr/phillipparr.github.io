@@ -7,6 +7,6 @@ img.banner {
   margin-left: auto;
   margin-right: auto;
 }
-#firstp  {
-  margin: 10px 30px 5px 5px
+p.p1{
+  margin-right: 100px;
 }
