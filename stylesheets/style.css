@@ -4,8 +4,5 @@ h1 {
 }
 #p1 {
   display: block;
-  margin: 0 auto;
-}
-#p3 {
-  margin-right: 50px
+  margin: auto;
 }
