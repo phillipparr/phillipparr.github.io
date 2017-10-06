@@ -10,9 +10,6 @@ img.banner {
 .p1  {
   float: left;
 }
-.firstbox {
-  width: 300px;
-  border: 25px solid green;
-  padding: 25px;
-  margin: 25px;
+div {
+  border: 25px solid black;
 }
