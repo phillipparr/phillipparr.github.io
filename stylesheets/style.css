@@ -10,7 +10,8 @@ img.banner {
 .p1  {
   float: left;
 }
-div {
+
+#first {
   border: 5px solid black;
   background-color: #aaa;
 }
