@@ -1,3 +1,7 @@
+header {
+  background-color: #bbb;
+  border: 2px solid blue;
+}
 h1 {
   text-align: center;
   color: blue;
@@ -14,4 +18,17 @@ img.banner {
 #first {
   border: 5px solid black;
   background-color: #aaa;
+  float: left;
+  width: 66%;
+}
+aside {
+  float:right;
+  border: 5px solid black;
+  width: 33%;
+  background-color: #ccc
+}
+footer {
+  clear: both;
+  background-color: #bbb
+  border: 2px solid red;
 }
