@@ -15,20 +15,20 @@ img.banner {
   float: left;
 }
 
-#first {
-  border: 5px solid black;
-  background-color: #aaa;
+article {
   float: left;
   width: 66%;
+  border: 5px solid black;
+  background-color: #aaa;
 }
 aside {
-  float:right;
-  border: 5px solid black;
+  float: right;
   width: 33%;
-  background-color: #ccc
+  border: 5px solid black;
+  background-color: #ccc;
 }
 footer {
   clear: both;
-  background-color: #bbb
+  background-color: #bbb;
   border: 2px solid red;
 }
