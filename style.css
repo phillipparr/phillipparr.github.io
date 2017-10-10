@@ -2,7 +2,7 @@
 header img {
   float: left;
 }
-header nav {
+nav a {
   text-decoration: none;
   display: inline-block;
   color: white;
