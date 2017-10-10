@@ -2,6 +2,11 @@
 header img {
   float: left;
 }
+nav {
+  background-color: #C2DCAF;
+  text-align: center;
+  height: 67.594px;
+}
 nav a {
   text-decoration: none;
   display: inline-block;
