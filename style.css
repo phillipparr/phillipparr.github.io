@@ -1,18 +1,24 @@
-header {
-  background-color: #bbb;
-  border: 2px solid blue;
+/*Universal Items*/
+header img {
+  float: left;
+}
+header nav {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  padding: 30px;
+  font-size: 1.3em;
+  font-family: sans-serif;
 }
 h1 {
   text-align: center;
   color: blue;
 }
+/*Home Page*/
 img.banner {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-.p1  {
-  float: left;
 }
 
 section {
