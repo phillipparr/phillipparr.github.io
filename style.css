@@ -22,8 +22,10 @@ body {
 
 .img-holder a {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
+  bottom: 40px;
+  left: 100px;
+  border: 1px solid black;
+  padding: 20px;
 }
 img.banner {
   display: block;
@@ -44,6 +46,7 @@ img.banner {
   color: white;
   font-family: sans-serif;
   list-style-type: none;
+  text-transform: uppercase;
 }
 .flexwrap {
   display: flex;
