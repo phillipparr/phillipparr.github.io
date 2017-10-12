@@ -1,0 +1,33 @@
+.regular {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+.cflex {
+  display: flex;
+}
+.cbox {
+  height: auto;
+  min-width: 100px;
+}
+.goright a {
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+.goright {
+  margin-right: 50px;
+  border: 5px double black;
+  border-radius: 12px;
+  padding: 30px;
+  padding-top: 0;
+}
+.goright p:first-child {
+  text-decoration: underline;
+  text-align: center;
+}
+.goleft {
+  margin-left: 20px;
+  margin-right: 20px;
+}

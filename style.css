@@ -2,7 +2,7 @@ body {
   scroll-behavior: smooth;
   font-family: sans-serif;
 }
-@media screen and (min-width: 468px){
+/*Header*/
 .ntop {
   background-color: rgba(0, 0, 0, 0.8); /*fix the color*/
   position: fixed;
@@ -20,7 +20,8 @@ body {
   font-family: sans-serif;
   text-transform: uppercase;
 }
-
+/*Banner*/
+/*https://stackoverflow.com/questions/23238108/how-to-add-button-over-image-using-css */
 .img-holder a {
   position: absolute;
   bottom: 40px;
@@ -31,6 +32,7 @@ body {
   -webkit-transition-duration: 0.4s; /* Safari - from W3schools */
   transition-duration: 0.6s;
   background-color: rgba(8, 77, 128, 0.32);
+  color: black;
 }
 .img-holder a:hover {
   background-color: rgba(112, 15, 235, 0.52);
@@ -41,6 +43,7 @@ img.banner {
   margin-left: auto;
   margin-right: auto;
 }
+/*Footer*/
 .nbottom {
   background-color: rgba(0, 0, 0, 0.8); /*fix the color, same as top*/
   height: 65px;
