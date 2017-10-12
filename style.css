@@ -1,3 +1,6 @@
+body {
+  scroll-behavior: smooth;
+}
 nav {
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
@@ -20,6 +23,28 @@ img.banner {
   margin-left: auto;
   margin-right: auto;
 }
-.banner {
-  margin-top: 0;
+
+/*.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective-origin: left;
 }
+
+.parallax_layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin:left;
+}
+
+.parallax_layer--base {
+  transform: translateZ(0);
+}
+
+.parallax_layer--back {
+  transform: translateZ(-1px) scale(2);
+}*/
