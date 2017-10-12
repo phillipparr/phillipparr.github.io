@@ -20,6 +20,11 @@ body {
   text-transform: uppercase;
 }
 
+.img-holder a {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
 img.banner {
   display: block;
   margin-left: auto;
