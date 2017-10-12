@@ -1,21 +1,23 @@
 body {
   scroll-behavior: smooth;
 }
-nav {
-  background-color: rgba(0, 0, 0, 0.8);
+@media screen and (min-width: 468px){
+.ntop {
+  background-color: rgba(0, 0, 0, 0.8); /*fix the color*/
   position: fixed;
   top: 0;
   width: 100%;
   text-align: center;
-  height: 67.594px;
+  height: 65px;
 }
-nav a {
+.ntop a {
   text-decoration: none;
   display: inline-block;
   color: white;
   padding: 30px;
-  font-size: 1.3em;
+  font-size: 1.3em; /*fix the font*/
   font-family: sans-serif;
+  text-transform: uppercase;
 }
 
 img.banner {
@@ -23,28 +25,39 @@ img.banner {
   margin-left: auto;
   margin-right: auto;
 }
-
-/*.parallax {
-  perspective: 1px;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  perspective-origin: left;
+.nbottom {
+  background-color: rgba(0, 0, 0, 0.8); /*fix the color, same as top*/
+  height: 65px;
+  list-style-type: none;
+  color: white;
+  font-family: sans-serif;
+  width: 100%;
 }
 
-.parallax_layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transform-origin:left;
+.nbottom a {
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+  list-style-type: none;
+}
+.flexwrap {
+  display: flex;
 }
 
-.parallax_layer--base {
-  transform: translateZ(0);
+.box {
+  height: 60px;
+  flex-grow: 1;
 }
 
-.parallax_layer--back {
-  transform: translateZ(-1px) scale(2);
-}*/
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+  margin-right: 20px;
+}
+
+.left {
+  margin-left: 20px;
+}
