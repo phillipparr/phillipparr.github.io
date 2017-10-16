@@ -7,7 +7,7 @@ body {
   background-color: rgba(0, 0, 0, 0.8); /*fix the color*/
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   text-align: center;
   height: 65px;
 }
@@ -50,7 +50,7 @@ img.banner {
   list-style-type: none;
   color: white;
   font-family: sans-serif;
-  width: 100%;
+  width: 100vw;
 }
 
 .nbottom a {
