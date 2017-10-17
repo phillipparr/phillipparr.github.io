@@ -3,32 +3,22 @@
   margin-right: 20px;
   margin-bottom: 0;
 }
+
 .cflex {
   display: flex;
 }
 .cbox {
   height: auto;
-  min-width: 200px;
+  min-width: 100px;
 }
-.goright a {
-  list-style-type: none;
-  text-decoration: none;
-  color: black;
-}
-.goright {
-  margin-right: 50px;
-  border: 5px double black;
-  border-radius: 12px;
-  padding: 30px;
-  padding-top: 0;
-  max-height: 400px;
-}
-.goright p:first-child {
-  text-decoration: underline;
-  text-align: center;
-  text-transform: uppercase;
-}
+
 .goleft {
   margin-left: 20px;
   margin-right: 20px;
+}
+@media (max-width: 600px) {
+  .goright img {
+    padding-top: 10vh;
+  }
+
 }

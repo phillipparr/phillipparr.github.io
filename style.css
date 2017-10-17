@@ -4,30 +4,33 @@ body {
 }
 /*Header*/
 .ntop {
-  background-color: rgba(0, 0, 0, 0.8); /*fix the color*/
+  background-color: rgba(49, 140, 179, 0.76); /*fix the color*/
   position: fixed;
   top: 0;
   width: 100vw;
   text-align: center;
-  height: 65px;
+  height: 10%;
+  border-radius: 5px;
 }
 .ntop a {
   text-decoration: none;
   display: inline-block;
   color: white;
-  padding: 30px;
+  padding-top: 2%;
+  padding-left: 10%;
   font-size: 1.3em; /*fix the font*/
   font-family: sans-serif;
   text-transform: uppercase;
 }
+
 /*Banner*/
 /*https://stackoverflow.com/questions/23238108/how-to-add-button-over-image-using-css */
 .img-holder a {
   position: absolute;
-  bottom: 40px;
-  left: 100px;
+  top: 20vh;
+  left: 5vw;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 22px;
   text-decoration: none;
   -webkit-transition-duration: 0.4s; /* Safari - from W3schools */
   transition-duration: 0.6s;
@@ -38,19 +41,27 @@ body {
   background-color: rgba(112, 15, 235, 0.52);
   color: white;
 }
+@media (max-width: 600px) {
+  .img-holder a {
+    display: none;
+  }
+}
 img.banner {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 /*Footer*/
 .nbottom {
-  background-color: rgba(0, 0, 0, 0.8); /*fix the color, same as top*/
-  height: 65px;
+  background-color: black; /*fix the color, same as top*/
+  height: 20vh;
   list-style-type: none;
   color: white;
   font-family: sans-serif;
   width: 100vw;
+  border-radius: 5px;
+  margin-top: 10vh;
 }
 
 .nbottom a {
@@ -71,14 +82,16 @@ img.banner {
 
 .center {
   text-align: center;
-  padding-top: 10px
+  padding-top: 7vh;
 }
 
 .right {
   text-align: right;
   margin-right: 20px;
+  padding-top: 6vh;
 }
 
 .left {
   margin-left: 20px;
+  padding-top: 3vh;
 }
