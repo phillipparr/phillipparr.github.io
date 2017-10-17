@@ -20,5 +20,8 @@
   .goright img {
     padding-top: 10vh;
   }
+  .regular, .cbox {
+    font-size: 1.1em;
+  }
 
 }
