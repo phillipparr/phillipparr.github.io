@@ -3,7 +3,9 @@ body {
   font-family: sans-serif;
   overflow-x: hidden;
 }
-/*Header*/
+
+/*hamburger*/
+
 .ntop {
   position: fixed;
   z-index: 0;
@@ -14,6 +16,7 @@ body {
   list-style: none;
   background: #02181b;
 }
+
 .ntop a {
   text-decoration: none;
   display: block;
@@ -21,7 +24,7 @@ body {
   color: white;
   font-size: 1.2em;
   text-transform: uppercase;
-  transition: color 0.2s,background 0.5s;
+  transition: color 0.2s, background 0.5s;
 }
 
 .ntop a:hover {
@@ -38,6 +41,7 @@ body {
   left: 0;
   z-index: 1;
 }
+
 .nav-trigger {
   position: absolute;
   clip: rect(0, 0, 0, 0);
@@ -45,56 +49,73 @@ body {
 
 label[for="nav-trigger"] {
   position: fixed;
-  left: 15px; top: 15px;
+  left: 2vw;
+  top: 2vh;
   z-index: 2;
-  height: 30px;
-  width: 30px;
-  cursor: pointer;
 }
+
 label[for="nav-trigger"] div {
   width: 35px;
   height: 5px;
   background-color: #333;
   margin: 6px 0;
   transition: 0.2s;
+  /*cursor: pointer; why isn't this working ASK MARTIN!!*/
 }
+
 .change .bar1 {
   transform: rotate(-45deg) translate(-9px, 6px);
 }
+
 .change .bar2 {
   opacity: 0;
 }
+
 .change .bar3 {
   transform: rotate(45deg) translate(-8px, -8px);
 }
-.nav-trigger + label, .site-wrap {
+
+.nav-trigger+label, .site-wrap {
   transition: left 0.4s;
 }
-.nav-trigger:checked + label {
+
+.nav-trigger:checked+label {
   left: 215px;
 }
-.nav-trigger:checked ~ .site-wrap {
+
+.nav-trigger:checked~.site-wrap {
   left: 200px;
 }
-*,*:before,*:after{box-sizing:border-box;margin:0;padding:0;}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /*Banner*/
+
 /*https://stackoverflow.com/questions/23238108/how-to-add-button-over-image-using-css */
+
 .img-holder a {
   position: absolute;
-  top: 20vh;
-  left: 5vw;
+  top: 5vh;
+  right: 5vw;
   padding: 20px;
   border-radius: 22px;
   text-decoration: none;
-  -webkit-transition-duration: 0.4s; /* Safari - from W3schools */
+  -webkit-transition-duration: 0.4s;
+  /* Safari - from W3schools */
   transition-duration: 0.6s;
   background-color: rgba(8, 77, 128, 0.32);
   color: black;
 }
+
 .img-holder a:hover {
   background-color: rgba(112, 15, 235, 0.52);
   color: white;
 }
+
 @media (max-width: 600px) {
   .img-holder a {
     display: none;
@@ -103,15 +124,19 @@ label[for="nav-trigger"] div {
     display: none;
   }
 }
+
 img.banner {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
 }
+
 /*Footer*/
+
 .nbottom {
-  background-color: black; /*fix the color, same as top*/
+  background-color: black;
+  /*fix the color, same as top*/
   height: 20vh;
   list-style-type: none;
   color: white;
@@ -128,6 +153,7 @@ img.banner {
   list-style-type: none;
   text-transform: uppercase;
 }
+
 .flexwrap {
   display: flex;
 }
