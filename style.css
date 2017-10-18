@@ -1,28 +1,82 @@
 body {
   scroll-behavior: smooth;
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 /*Header*/
 .ntop {
-  background-color: rgba(49, 140, 179, 0.76); /*fix the color*/
   position: fixed;
+  z-index: 0;
   top: 0;
-  width: 100vw;
-  text-align: center;
-  height: 10%;
-  border-radius: 5px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  list-style: none;
+  background: #02181b;
 }
 .ntop a {
   text-decoration: none;
-  display: inline-block;
+  display: block;
+  padding: 1em;
   color: white;
-  padding-top: 2%;
-  padding-left: 10%;
-  font-size: 1.3em; /*fix the font*/
-  font-family: sans-serif;
+  font-size: 1.2em;
   text-transform: uppercase;
+  transition: color 0.2s,background 0.5s;
 }
 
+.ntop a:hover {
+  color: rgb(92, 189, 131);
+}
+
+.site-wrap {
+  min-width: 100%;
+  min-height: 100%;
+  background-color: white;
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
+}
+.nav-trigger {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+label[for="nav-trigger"] {
+  position: fixed;
+  left: 15px; top: 15px;
+  z-index: 2;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+label[for="nav-trigger"] div {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.2s;
+}
+.change .bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+.change .bar2 {
+  opacity: 0;
+}
+.change .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+.nav-trigger + label, .site-wrap {
+  transition: left 0.4s;
+}
+.nav-trigger:checked + label {
+  left: 215px;
+}
+.nav-trigger:checked ~ .site-wrap {
+  left: 200px;
+}
+*,*:before,*:after{box-sizing:border-box;margin:0;padding:0;}
 /*Banner*/
 /*https://stackoverflow.com/questions/23238108/how-to-add-button-over-image-using-css */
 .img-holder a {

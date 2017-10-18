@@ -4,24 +4,34 @@
 <head>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="homestyle.css" />
+  <script type="text/javascript" src="script.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yuca's</title>
 </head>
 
 <body>
-  <header>
-    <nav class="ntop">
-      <a href="index.html">home</a>
-      <a href="press.html">press</a>
-      <a href="family.html">family</a>
-      <a href="menu.html">menu</a>
-      <a href="contact.html">contact</a>
-    </nav>
+  <nav class="ntop">
+    <li><a href="index.html">home</a></li>
+    <li><a href="press.html">press</a></li>
+    <li><a href="family.html">family</a></li>
+    <li><a href="menu.html">menu</a></li>
+    <li><a href="contact.html">contact</a></li>
+  </nav>
+
+<!-- from a hamburger menu totorial https://www.sitepoint.com/pure-css-off-screen-navigation-menu/ -->
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger" onclick="myFunction(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </label>
+
+  <div class="site-wrap">
     <div class="img-holder">
       <img src="images/yucasbanner1.jpg" alt="taco" class="banner">
       <a href="#content">OUR STORY</a>
     </div>
-  </header>
+<!-- This is where the content that will be repeated on every page ends until the footer-->
   <p id="content" class="regular">
       'Mama' Socorro Herrera opened Yuca's, a taco stand in a liquor store parking
       lot on Hillhurst Avenue in Los Angeles' Los Feliz neighborhood. If you're
@@ -74,6 +84,7 @@
     Yuca's is not just beloved by LA natives, it won a James Beard award
     in 2005.
   </p>
+  <!-- This is where the content that's on every page begins again -->
   <footer>
     <nav class="nbottom">
       <div class="flexwrap">
@@ -95,5 +106,6 @@
         </span>
       </div>
   </footer>
+</div>
 
 </html>
