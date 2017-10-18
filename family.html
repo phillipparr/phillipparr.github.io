@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuca's Family</title>
-  </head>
-  <body>
-    <header>
-      <nav class="ntop">
-        <a href="index.html">home</a>
-        <a href="press.html">press</a>
-        <a href="family.html">family</a>
-        <a href="menu.html">menu</a>
-        <a href="contact.html">contact</a>
-      </nav>
-      <img src="images/yucasbanner2.jpg" alt="taco" class="banner">
-    </header>
-    <footer>
-      <nav class="nbottom">
-        <div class="flexwrap">
-          <span class="box left">
-            <li><a href="index.html">home</a></li>
-            <li><a href="press.html">press</a></li>
-            <li><a href="family.html">family</a></li>
-          </span>
-          <span class="box center">
-            <li>Hillhurst Avenue</li>
-            <li>Los Angeles, CA 90028</li>
-          </span>
-          <span class="box right">
-            <li><a href="menu.html">menu</a></li>
-            <li><a href="contact.html">contact</a></li>
-          </span>
-        </div>
-    </footer>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css" />
+  <script type="text/javascript" src="script.js"></script>
+  <title>Yuca's</title>
+</head>
+
+<body>
+  <nav class="ntop">
+    <li><a href="index.html">home</a></li>
+    <li><a href="press.html">press</a></li>
+    <li><a href="family.html">family</a></li>
+    <li><a href="menu.html">menu</a></li>
+    <li><a href="contact.html">contact</a></li>
+  </nav>
+
+  <!-- from a hamburger menu totorial https://www.sitepoint.com/pure-css-off-screen-navigation-menu/ -->
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger" onclick="myFunction(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </label>
+
+  <div class="site-wrap">
+    <div class="img-holder">
+      <img src="images/yucasbanner1.jpg" alt="taco" class="banner">
+      <a href="#content">OUR STORY</a>
+    </div>
+  <!-- This is where the content that will be repeated on every page ends until the footer-->
+  <!-- Footer: This is where the content that's on every page begins again -->
+    <nav class="nbottom">
+      <div class="flexwrap">
+        <span class="box left">
+          <li><a href="index.html">home</a></li>
+          <br>
+          <li><a href="press.html">press</a></li>
+          <br>
+          <li><a href="family.html">family</a></li>
+        </span>
+        <span class="box center">
+          <li>2056 Hillhurst Avenue</li>
+          <li>Los Angeles, CA 90027</li>
+        </span>
+        <span class="box right">
+          <li><a href="menu.html">menu</a></li>
+          <p></p>
+          <li><a href="contact.html">contact</a></li>
+        </span>
+      </div>
+    </nav>
+  </div>
+</body>
 </html>

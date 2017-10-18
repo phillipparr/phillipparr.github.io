@@ -33,7 +33,7 @@ body {
 
 .site-wrap {
   min-width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   background-color: white;
   position: relative;
   top: 0;
@@ -80,11 +80,11 @@ label[for="nav-trigger"] div {
 }
 
 .nav-trigger:checked+label {
-  left: 215px;
+  left: 17vw;
 }
 
 .nav-trigger:checked~.site-wrap {
-  left: 200px;
+  left: 15vw;
 }
 
 *, *:before, *:after {
@@ -99,20 +99,20 @@ label[for="nav-trigger"] div {
 
 .img-holder a {
   position: absolute;
-  top: 5vh;
-  right: 5vw;
-  padding: 20px;
-  border-radius: 22px;
+  top: 2vh;
+  right: 2vw;
+  padding: 1%;
+  /*border-radius: 22px;*/
   text-decoration: none;
-  -webkit-transition-duration: 0.4s;
   /* Safari - from W3schools */
-  transition-duration: 0.6s;
-  background-color: rgba(8, 77, 128, 0.32);
-  color: black;
+  transition-duration: 0.4s;
+  background-color: #333;
+  color: white;
+  font-size: 1em;
 }
 
 .img-holder a:hover {
-  background-color: rgba(112, 15, 235, 0.52);
+  background-color: rgba(83, 164, 116, 0.51);
   color: white;
 }
 
@@ -130,6 +130,7 @@ img.banner {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+  height: 100vh;
 }
 
 /*Footer*/
@@ -144,6 +145,7 @@ img.banner {
   width: 100vw;
   border-radius: 5px;
   margin-top: 10vh;
+  bottom: 0;
 }
 
 .nbottom a {
