@@ -1,7 +1,9 @@
-.regular {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 0;
+.all {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-top: 4em;
+  padding-bottom: 1em;
+  line-height: 150%;
 }
 
 .cflex {
@@ -10,17 +12,25 @@
 .cbox {
   height: auto;
   min-width: 100px;
+  margin-top: 10vh;
 }
 
 .goleft {
-  margin-left: 20px;
-  margin-right: 20px;
+  /*margin-left: 20px;*/
+  margin-right: 4em;
+}
+
+.third {
+  margin-top: 10vh;
+}
+.fourth {
+  margin-top: 10vh;
 }
 @media (max-width: 600px) {
   .goright img {
     padding-top: 10vh;
   }
-  .regular, .cbox {
+  .first, .cbox {
     font-size: 1.1em;
   }
 

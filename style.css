@@ -34,7 +34,7 @@ body {
 .site-wrap {
   min-width: 100%;
   min-height: 100vh;
-  background-color: white;
+  background-color: rgb(241, 248, 249);
   position: relative;
   top: 0;
   bottom: 100%;
@@ -57,14 +57,14 @@ label[for="nav-trigger"] {
 label[for="nav-trigger"] div {
   width: 35px;
   height: 5px;
-  background-color: rgb(109, 194, 143);/*#46724E*/
+  background-color: rgb(109, 194, 143);
   margin: 6px 0;
-  transition: 0.2s;
+  transition: .7s;
   /*cursor: pointer; why isn't this working ASK MARTIN!!*/
 }
 
 .change .bar1 {
-  transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-405deg) translate(-9px, 6px);
 }
 
 .change .bar2 {
@@ -72,7 +72,7 @@ label[for="nav-trigger"] div {
 }
 
 .change .bar3 {
-  transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(405deg) translate(-8px, -8px);
 }
 
 .nav-trigger+label, .site-wrap {
@@ -99,7 +99,7 @@ label[for="nav-trigger"] div {
 
 .img-holder a {
   position: absolute;
-  right: 555px;
+  right: 50%;
   top: 90vh;
 }
 
@@ -109,14 +109,11 @@ label[for="nav-trigger"] div {
   color: white;
 }*/
 
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
   .img-holder a {
     display: none;
   }
-  .ntop {
-    display: none;
-  }
-}
+}*/
 
 img.banner {
   display: block;
@@ -137,7 +134,6 @@ img.banner {
   font-family: sans-serif;
   width: 100vw;
   border-radius: 5px;
-  margin-top: 10vh;
   bottom: 0;
 }
 

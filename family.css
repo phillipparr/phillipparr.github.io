@@ -1,0 +1,18 @@
+#content {
+  padding-bottom: 4em;
+  padding-left: 6em;
+  padding-right: 7em;
+  margin: 0;
+}
+.person1, .person2, .person3, .person4 {
+  display: flex;
+  line-height: 150%;
+  justify-content: space-between;
+  padding-top: 4em;
+}
+.person1 img, .person3 img, .person2 p, .person4 p {
+  padding-left: 3em;
+}
+hr {
+  margin-top: 3em;
+}
