@@ -28,7 +28,7 @@ body {
 }
 
 .ntop a:hover {
-  color: rgb(92, 189, 131);
+  color: #5cbd83;
 }
 
 .site-wrap {
@@ -57,7 +57,7 @@ label[for="nav-trigger"] {
 label[for="nav-trigger"] div {
   width: 35px;
   height: 5px;
-  background-color: #333;
+  background-color: rgb(109, 194, 143);/*#46724E*/
   margin: 6px 0;
   transition: 0.2s;
   /*cursor: pointer; why isn't this working ASK MARTIN!!*/
@@ -99,22 +99,15 @@ label[for="nav-trigger"] div {
 
 .img-holder a {
   position: absolute;
-  top: 2vh;
-  right: 2vw;
-  padding: 1%;
-  /*border-radius: 22px;*/
-  text-decoration: none;
-  /* Safari - from W3schools */
-  transition-duration: 0.4s;
-  background-color: #333;
-  color: white;
-  font-size: 1em;
+  right: 555px;
+  top: 90vh;
 }
 
+/* This is the hover effect for when it was a button... maybe try to put a hover overlay for the photo??
 .img-holder a:hover {
   background-color: rgba(83, 164, 116, 0.51);
   color: white;
-}
+}*/
 
 @media (max-width: 600px) {
   .img-holder a {
