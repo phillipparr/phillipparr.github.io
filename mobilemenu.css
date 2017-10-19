@@ -81,7 +81,7 @@ label[for="nav-trigger"] div {
 }
 
 .nav-trigger:checked+label {
-  top: 95vh;
+  top: 90vh;
 }
 
 .nav-trigger:checked~.site-wrap {
