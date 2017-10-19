@@ -45,20 +45,20 @@ body {
 }
 label[for="nav-trigger"] {
   position: fixed;
-  right: 2vw;
-  top: 2vh;
+  right: 5vw;
+  top: 4vh;
   z-index: 2;
 }
 label[for="nav-trigger"] div {
-  width: 35px;
-  height: 5px;
+  width: 55px;
+  height: 8px;
   background-color: rgb(109, 194, 143);
   margin: 6px 0;
   transition: .7s;
   /*cursor: pointer; why isn't this working ASK MARTIN!!*/
 }
 .change .bar1 {
-  transform: rotate(-405deg) translate(-9px, 6px);
+  transform: rotate(-405deg) translate(-11px, 8px);
 }
 
 .change .bar2 {
@@ -66,7 +66,7 @@ label[for="nav-trigger"] div {
 }
 
 .change .bar3 {
-  transform: rotate(405deg) translate(-8px, -8px);
+  transform: rotate(405deg) translate(-10px, -10px);
 }
 
 .nav-trigger+label, .site-wrap {
@@ -74,11 +74,11 @@ label[for="nav-trigger"] div {
 }
 
 .nav-trigger:checked+label {
-  top: 22vh;
+  top: 25vh;
 }
 
 .nav-trigger:checked~.site-wrap {
-  top: 24vh;
+  top: 25vh;
 }
 *, *:before, *:after {
   box-sizing: border-box;
