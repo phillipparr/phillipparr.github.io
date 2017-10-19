@@ -1,3 +1,17 @@
+/*I implemented this fold-out hamburger menu using this tutorial: https://www.sitepoint.com/pure-css-off-screen-navigation-menu/
+The first thing I did was create new HTML and CSS files for the code in the tutorial
+and open them in chrome to see what the output was on my own machine. The HTML was
+easy enough to understand but the CSS was complicated so I went through it essentially
+line by line, commenting them out and refreshing the browser to see the changes.
+I did this so that I could understand what each line accomplished. Then I would
+add a comment next to the lines or sections that weren't obvious to remind myself
+what each one did, which ones I didn't understand, and which ones were especially
+important (see the screenshots). Then I put the put the example HTML sheet next to my
+index HTML sheet for this coursework and adjusted my own so that it would work.
+I did the same thing with the CSS, I didn't copy paste anything because I thought
+actually typing it out would help me understand a little better. Eventually I gave
+the menu it's own CSS file because I decided to implement a different style menu
+for mobile.*/
 .ntop {
   position: fixed;
   z-index: 0;
