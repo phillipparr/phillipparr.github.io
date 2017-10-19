@@ -80,9 +80,9 @@ label[for="nav-trigger"] div {
   transition: top 0.4s;
 }
 
-.nav-trigger:checked+label {
-  top: 90vh;
-}
+/*.nav-trigger:checked+label {
+  top: 4vh;
+}*/
 
 .nav-trigger:checked~.site-wrap {
   top: 100vh;
