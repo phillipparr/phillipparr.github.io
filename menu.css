@@ -1,0 +1,74 @@
+/*I got this from https://alligator.io/css/pure-css-parallax/. I added more sets
+of photos and adjust the size of the overlaid boxes -- the ones containing text.
+I changed the images, text colors, etc. This was a particularly helpful tutorial
+because the code contained several helpful comments that I could use to understand
+why each line was necessary, or in some cases not necessary. I followed a similar
+approach to what I did with the hamburger menu tutorial in adapting this tutorial.
+This one was much faster though, because of the included comments. */
+.wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+  border-top: 5px solid black;
+}
+
+.section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 0 5px #000;
+}
+
+.parallax::after {
+  content: " "; /*this is important but why!? ASK MARTIN*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: -1;
+}
+
+.static {
+  background: red;
+  height: 50vh;
+}
+
+
+.bg1::after {
+  background-image: url('https://placekitten.com/g/900/700');
+}
+
+.bg2::after {
+  background-image: url('https://placekitten.com/g/800/600');
+}
+.bg3::after {
+  background-image: url('https://placekitten.com/g/900/700');
+}
+
+.bg4::after {
+  background-image: url('https://placekitten.com/g/800/600');
+}
+.bg5::after {
+  background-image: url('https://placekitten.com/g/900/700');
+}
+
+.bg6::after {
+  background-image: url('https://placekitten.com/g/800/600');
+}
+.bg7::after {
+  background-image: url('https://placekitten.com/g/900/700');
+}
+
+.bg8::after {
+  background-image: url('https://placekitten.com/g/800/600');
+}
+.nbottom {
+  margin-top: 0;
+}
