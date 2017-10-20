@@ -36,38 +36,39 @@ This one was much faster though, because of the included comments. */
 }
 
 .static {
-  background: red;
+  background: rgb(109, 194, 143);
   height: 50vh;
+  border-radius: 5px;
 }
 
 
 .bg1::after {
-  background-image: url('https://placekitten.com/g/900/700');
+  background-image: url('images/window1.jpg');
 }
 
 .bg2::after {
-  background-image: url('https://placekitten.com/g/800/600');
+  background-image: url('images/pibil.jpg');
 }
 .bg3::after {
-  background-image: url('https://placekitten.com/g/900/700');
+  background-image: url('images/burritos1.jpg');
 }
 
 .bg4::after {
-  background-image: url('https://placekitten.com/g/800/600');
+  background-image: url('images/tortas.jpg');
 }
 .bg5::after {
-  background-image: url('https://placekitten.com/g/900/700');
+  background-image: url('images/burger.jpg');
 }
 
 .bg6::after {
-  background-image: url('https://placekitten.com/g/800/600');
+  background-image: url('images/alltacos.jpg');
 }
 .bg7::after {
-  background-image: url('https://placekitten.com/g/900/700');
+  background-image: url('images/drinks.jpg');
 }
 
 .bg8::after {
-  background-image: url('https://placekitten.com/g/800/600');
+  background-image: url('images/sign copy.jpg');
 }
 .nbottom {
   margin-top: 0;
