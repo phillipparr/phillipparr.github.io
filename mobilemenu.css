@@ -27,7 +27,7 @@ body {
   display: block;
   padding: 1.7em;
   color: black;
-  font-size: 4em;
+  font-size: 1em;
   text-transform: uppercase;
   transition: color 0.2s, background 0.5s;
 }

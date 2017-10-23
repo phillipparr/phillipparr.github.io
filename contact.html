@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" media="screen and (min-device-width: 700px)" href="deskmenu.css">
     <link rel="stylesheet" media="screen and (max-device-width: 700px)" href="mobilemenu.css">
@@ -10,41 +11,39 @@
     <title>Yuca's</title>
   </head>
 
-  <body>
-    <nav class="ntop">
-      <li><a href="index.html">home</a></li>
-      <li><a href="press.html">press</a></li>
-      <li><a href="family.html">family</a></li>
-      <li><a href="menu.html">menu</a></li>
-      <li><a href="contact.html">contact</a></li>
-    </nav>
-
-  <!-- from a hamburger menu totorial https://www.sitepoint.com/pure-css-off-screen-navigation-menu/ -->
-    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-    <label for="nav-trigger" onclick="myFunction(this)">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-    </label>
-
-    <div class="site-wrap">
-      <div class="img-holder">
-        <img src="images/yucasbanner1.jpg" alt="taco" class="banner">
-        <a href="#content">
-          <img src="images/greenarrow1.png">
-        </a>
-      </div>
+<body>
+<!-- from a hamburger menu totorial https://www.sitepoint.com/pure-css-off-screen-navigation-menu/ -->
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger" onclick="myFunction(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </label>
+  <nav class="ntop">
+    <li><a href="index.html">home</a></li>
+    <li><a href="press.html">press</a></li>
+    <li><a href="family.html">family</a></li>
+    <li><a href="menu.html">menu</a></li>
+    <li><a href="contact.html">contact</a></li>
+  </nav>
+  <div class="site-wrap">
+    <div class="img-holder">
+      <img src="images/yucasbanner1.jpg" alt="taco" class="banner">
+      <a href="#content">
+        <img src="images/greenarrow1.png">
+      </a>
+    </div>
 <!-- This is where the content that will be repeated on every page ends until the footer-->
-<div id="content">
-  <div class="flexbody">
-    <img src="images/map.png" class="map">
-    <ul class="list">
-      <li>address</li>
-      <li>phone number</li>
-      <li>email</li>
-    </ul>
-  </div>
-</div>
+    <div id="content">
+      <div class="flexbody">
+        <img src="images/map.png" class="map">
+        <ul class="list">
+          <li>address</li>
+          <li>phone number</li>
+          <li>email</li>
+        </ul>
+      </div>
+    </div>
 <!-- This is where the content that's on every page begins again -->
     <footer class="flexwrap">
       <div class="box left">
