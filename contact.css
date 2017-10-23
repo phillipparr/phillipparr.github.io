@@ -3,7 +3,6 @@
 }
 .flexbody {
   display: flex;
-  flex-grow: 1;
   justify-content: center;
 }
 .list {
@@ -13,4 +12,16 @@
 }
 .list li {
   padding-bottom: 3em;
+}
+@media (max-width:650px) {
+  .flexbody {
+    display: flex;
+    flex-direction: column;
+  }
+  .list {
+    text-align: center;
+  }
+  #content {
+    padding: 1em;
+  }
 }

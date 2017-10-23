@@ -27,7 +27,7 @@ body {
   display: block;
   padding: 1.7em;
   color: black;
-  font-size: 1em;
+  font-size: 1.5em;
   text-transform: uppercase;
   transition: color 0.2s, background 0.5s;
 }
@@ -58,15 +58,15 @@ label[for="nav-trigger"] {
   z-index: 2;
 }
 label[for="nav-trigger"] div {
-  width: 75px;
-  height: 8px;
+  width: 55px;
+  height: 6px;
   background-color: rgb(109, 194, 143);
   margin: 10px 0;
   transition: .7s;
   /*cursor: pointer; why isn't this working ASK MARTIN!!*/
 }
 .change .bar1 {
-  transform: rotate(-405deg) translate(-12px, 11px);
+  transform: rotate(-405deg) translate(-12px, 9px);
 }
 
 .change .bar2 {
@@ -74,7 +74,7 @@ label[for="nav-trigger"] div {
 }
 
 .change .bar3 {
-  transform: rotate(405deg) translate(-11px, -14px);
+  transform: rotate(405deg) translate(-11px, -11px);
 }
 
 .nav-trigger+label, .site-wrap {
