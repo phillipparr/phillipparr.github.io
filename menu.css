@@ -71,3 +71,9 @@ This one was much faster though, because of the included comments. */
 .nbottom {
   margin-top: 0;
 }
+@media (max-width: 700px) {
+  .bg2::after {
+    height: 30vh;
+  }
+
+}
