@@ -40,7 +40,6 @@ img.banner {
 
 .flexwrap {
   display: flex;
-  height: 60px;
   align-items: center;
   background-color: black;
   height: 20vh;
