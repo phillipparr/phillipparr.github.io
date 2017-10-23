@@ -51,7 +51,9 @@ img.banner {
   justify-content: space-around;
 }
 
-
+.box {
+  padding-top: 2vh;
+}
 .center {
   text-align: center;
 }

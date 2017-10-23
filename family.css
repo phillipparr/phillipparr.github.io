@@ -1,18 +1,30 @@
 #content {
-  padding-bottom: 4em;
-  padding-left: 6em;
-  padding-right: 7em;
-  margin: 0;
-}
-.person1, .person2, .person3, .person4 {
   display: flex;
-  line-height: 150%;
-  justify-content: space-between;
-  padding-top: 4em;
+  flex-direction: column;
+  margin: 3em;
 }
-.person1 img, .person3 img, .person2 p, .person4 p {
-  padding-left: 3em;
+
+.person {
+  width: 100%;
+  display: flex;
+  min-height: 40vh;
+  align-items: center;
+  justify-content: space-around;
 }
-hr {
-  margin-top: 3em;
+
+.person p {
+  max-width: 60%;
+}
+
+@media (max-width: 700px) {
+  .person {
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    order: 1;
+  }
+  p {
+    order: 2;
+  }
 }
