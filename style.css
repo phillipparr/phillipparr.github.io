@@ -20,11 +20,6 @@ body {
   color: white;
 }*/
 
-/*@media (max-width: 600px) {
-  .img-holder a {
-    display: none;
-  }
-}*/
 
 img.banner {
   display: block;
@@ -40,7 +35,6 @@ img.banner {
   text-decoration: none;
   color: white;
   font-family: sans-serif;
-  /*list-style-type: none;*/
   text-transform: uppercase;
 }
 
@@ -50,7 +44,6 @@ img.banner {
   align-items: center;
   background-color: black;
   height: 20vh;
-  /*list-style-type: none;*/
   color: white;
   font-family: sans-serif;
   width: 100vw;
