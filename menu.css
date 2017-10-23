@@ -96,6 +96,7 @@ h1 {
 
 .bg8::after {
   background-image: url('images/sign copy.jpg');
+  background-size: cover;
 }
 .nbottom {
   margin-top: 0;
