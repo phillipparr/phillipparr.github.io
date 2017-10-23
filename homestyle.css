@@ -8,15 +8,11 @@
 
 .cflex {
   display: flex;
-}
-.cbox {
-  height: auto;
-  min-width: 100px;
   margin-top: 10vh;
+  align-items: center;
 }
 
 .goleft {
-  /*margin-left: 20px;*/
   margin-right: 4em;
 }
 
@@ -27,9 +23,9 @@
   margin-top: 10vh;
 }
 @media (max-width: 600px) {
-  .goright img {
+  /*.goright img {
     padding-top: 10vh;
-  }
+  }*/
   .first, .cbox {
     font-size: 1.1em;
   }
