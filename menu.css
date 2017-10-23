@@ -20,6 +20,7 @@ This one was much faster though, because of the included comments. */
   align-items: center;
   justify-content: center;
   color: white;
+  text-shadow: 0 0 5px #000;
 }
 
 .parallax::after {
@@ -40,8 +41,9 @@ This one was much faster though, because of the included comments. */
   border-radius: 5px;
 }
 
+
 .bg1::after {
-  background-image: url('images/window.jpg');
+  background-image: url('images/window1.jpg');
 }
 
 .bg2::after {

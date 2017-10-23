@@ -36,7 +36,19 @@ img.banner {
 
 /*Footer*/
 
-.flexwrap a {
+.nbottom {
+  background-color: black;
+  /*fix the color, same as top*/
+  height: 20vh;
+  list-style-type: none;
+  color: white;
+  font-family: sans-serif;
+  width: 100vw;
+  border-radius: 5px;
+  bottom: 0;
+}
+
+.nbottom a {
   text-decoration: none;
   color: white;
   font-family: sans-serif;
@@ -46,20 +58,25 @@ img.banner {
 
 .flexwrap {
   display: flex;
-  height: 60px;
-  align-items: center;
-  background-color: black;
-  height: 20vh;
-  list-style-type: none;
-  color: white;
-  font-family: sans-serif;
-  width: 100vw;
-  border-radius: 5px;
-  bottom: 0;
-  justify-content: space-around;
 }
 
+.box {
+  height: 60px;
+  flex-grow: 1;
+}
 
 .center {
   text-align: center;
+  padding-top: 7vh;
+}
+
+.right {
+  text-align: right;
+  margin-right: 20px;
+  padding-top: 6vh;
+}
+
+.left {
+  margin-left: 20px;
+  padding-top: 3vh;
 }
