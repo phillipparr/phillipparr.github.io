@@ -21,7 +21,7 @@ https://stackoverflow.com/questions/23238108/how-to-add-button-over-image-using-
   .img-holder a {
     position: absolute;
     right: 50%
-    top: 85vh;
+    top: 60vh;
   }
 }
 /* This is the hover effect for when it was a button... maybe try to put a hover overlay for the photo??
