@@ -2,7 +2,6 @@
 
 body {
   font-family: sans-serif;
-  overflow-x: hidden;
   font-family: 'Saira Extra Condensed', sans-serif;
 }
 
@@ -17,11 +16,11 @@ https://stackoverflow.com/questions/23238108/how-to-add-button-over-image-using-
   top: 90vh;
 }
 
-@media (max-width:600px) {
+@media (max-width:320px) {
   .img-holder a {
     position: absolute;
     right: 50%;
-    top: 70vh;
+    top: 75vh;
   }
 }
 /* This is the hover effect for when it was a button... maybe try to put a hover overlay for the photo??
@@ -152,7 +151,7 @@ img.banner {
 }
 
 .person p {
-  max-width: 60%;
+  width: 60%;
 }
 
 .familytitle {
@@ -170,6 +169,7 @@ img.banner {
   }
   .person p {
     order: 2;
+    width: 100%;
   }
 }
 
