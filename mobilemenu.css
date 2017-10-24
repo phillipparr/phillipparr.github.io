@@ -1,13 +1,3 @@
-/*To change my hamburger menu to drop-down for mobile I essentially used a
-guess and check method. I tried it at first using just a media query but I couldn't
-make that work, so created a separate css sheet for smaller screen sizes,
-adjusted the html and added pieces of code section by section from the desktopmenu
-file to the mobile menu file to see what each piece did. Doing that and just looking
-at the code to see where things said "left" or "vw" I managed to figure out how to
-turn it into a drop-down instead of folding out from the left. This ended up being
-a good exercise because despite my efforts to understand as much as possible when
-I first implemented the desktop version of the menu, there were some things that I didn't
-totally understand.*/
 .ntop {
   position: fixed;
   z-index: 0;

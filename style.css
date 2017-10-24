@@ -50,7 +50,7 @@ img.banner {
 .flexwrap {
   display: flex;
   align-items: center;
-  background-color: black;
+  background-color: slategrey;
   color: white;
   font-family: sans-serif;
   width: 100vw;
@@ -67,6 +67,14 @@ img.banner {
   text-align: center;
 }
 
+.right {
+  display: flex;
+  flex-direction: row;
+}
+
+.right a {
+  padding-left: 1em;
+}
 /*Home Page*/
 
 .all {
@@ -249,7 +257,7 @@ img.banner {
 }
 
 .static {
-  background: linen;
+  background: snow;
   height: 50vh;
   border-radius: 5px;
   justify-content: space-around;
