@@ -1,7 +1,9 @@
 /*Body - Universal*/
+
 body {
   font-family: sans-serif;
   overflow-x: hidden;
+  font-family: 'Saira Extra Condensed', sans-serif;
 }
 
 /*Banner - Universal*/
@@ -20,13 +22,13 @@ body {
   color: white;
 }*/
 
-
 img.banner {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
   height: 100vh;
+  box-shadow: 0 5px 5px -5px #333;
 }
 
 /*Footer - Universal*/
@@ -53,6 +55,7 @@ img.banner {
 .box {
   padding-top: 2vh;
 }
+
 .center {
   text-align: center;
 }
@@ -65,6 +68,7 @@ img.banner {
   padding-top: 4em;
   padding-bottom: 1em;
   line-height: 150%;
+  font-size: 1.2em;
 }
 
 .cflex {
@@ -80,15 +84,15 @@ img.banner {
 .third {
   margin-top: 10vh;
 }
+
 .fourth {
   margin-top: 10vh;
 }
+
 @media (max-width: 600px) {
-  .first, .cbox, .third, .fourth {
-    font-size: 1.1em;
-  }
   .all {
     padding: 1em;
+    font-size: 1.1em;
   }
 }
 
@@ -100,7 +104,9 @@ img.banner {
   flex-grow: 1;
   width: 100vw;
   justify-content: space-around;
+  font-size: 1.1em;
 }
+
 .review {
   width: 45vw;
   text-align: center;
@@ -111,6 +117,7 @@ img.banner {
   padding: 1em;
   box-shadow: 5px 5px 5px #888888;
 }
+
 @media (max-width:700px) {
   #content {
     display: flex;
@@ -120,10 +127,12 @@ img.banner {
 }
 
 /*Family Page*/
+
 #content3 {
   display: flex;
   flex-direction: column;
   margin: 3em;
+  font-size: 1.1em;
 }
 
 .person {
@@ -138,6 +147,11 @@ img.banner {
   max-width: 60%;
 }
 
+.familytitle {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
 @media (max-width: 700px) {
   .person {
     display: flex;
@@ -155,19 +169,24 @@ img.banner {
 
 #content5 {
   padding: 4em;
+  font-size: 1.1em;
 }
+
 .flexbody {
   display: flex;
   justify-content: center;
 }
+
 .list {
   list-style: none;
   padding-left: 3em;
   padding-top: 3em;
 }
+
 .list li {
   padding-bottom: 3em;
 }
+
 @media (max-width:650px) {
   .flexbody {
     display: flex;
@@ -201,7 +220,8 @@ img.banner {
 }
 
 .parallax::after {
-  content: " "; /*this is important but why!? ASK MARTIN*/
+  content: " ";
+  /*this is important but why!? ASK MARTIN*/
   position: absolute;
   top: 0;
   right: 0;
@@ -220,6 +240,7 @@ img.banner {
   flex-direction: column;
   color: rgb(4, 9, 79);
 }
+
 .static span {
   padding-left: 2em;
   padding-right: 2em;
@@ -232,14 +253,22 @@ img.banner {
   justify-content: space-around;
   flex-direction: row;
 }
+
 .static a {
   text-transform: uppercase;
   color: rgb(4, 9, 79);
   font-size: 2em;
+  text-decoration: none;
 }
+
 .section h1 {
   font-size: 5em;
 }
+
+.static h4 {
+  font-size: 1.1em;
+}
+
 .bg1::after {
   background-image: url('images/window.jpg');
   background-size: cover;
@@ -249,6 +278,7 @@ img.banner {
   background-image: url('images/pibil.jpg');
   background-size: cover;
 }
+
 .bg3::after {
   background-image: url('images/burritos1.jpg');
   background-size: cover;
@@ -258,6 +288,7 @@ img.banner {
   background-image: url('images/tortas.jpg');
   background-size: cover;
 }
+
 .bg5::after {
   background-image: url('images/burger.jpg');
   background-size: cover;
@@ -267,6 +298,7 @@ img.banner {
   background-image: url('images/alltacos.jpg');
   background-size: cover;
 }
+
 .bg7::after {
   background-image: url('images/drinks.jpg');
   background-size: cover;
@@ -276,9 +308,12 @@ img.banner {
   background-image: url('images/sign copy.jpg');
   background-size: cover;
 }
+
 .nbottom {
   margin-top: 0;
 }
+
+
 @media (max-width:800px) {
   .links {
     display: flex;

@@ -32,10 +32,10 @@ body {
   transition: color 0.2s, background 0.5s;
 }
 
-/*I can't make this work... ASK MARTIN!!
-a:active {
+/*I can't make this work... ASK MARTIN!!*/
+.ntop a {
   color: rgb(109, 194, 143);
-}*/
+}
 
 .site-wrap {
   min-width: 100%;
