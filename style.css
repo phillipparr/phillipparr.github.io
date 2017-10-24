@@ -249,7 +249,7 @@ img.banner {
 }
 
 .static {
-  background: rgb(250, 254, 227);
+  background: linen;
   height: 50vh;
   border-radius: 5px;
   justify-content: space-around;
@@ -325,9 +325,6 @@ img.banner {
   background-size: cover;
 }
 
-.nbottom {
-  margin-top: 0;
-}
 
 
 @media (max-width:800px) {
