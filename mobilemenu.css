@@ -8,9 +8,6 @@ turn it into a drop-down instead of folding out from the left. This ended up bei
 a good exercise because despite my efforts to understand as much as possible when
 I first implemented the desktop version of the menu, there were some things that I didn't
 totally understand.*/
-/*body {
-  overflow-y: hidden;
-}*/
 .ntop {
   position: fixed;
   z-index: 0;

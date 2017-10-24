@@ -115,21 +115,29 @@ img.banner {
 }
 
 .review {
-  width: 45vw;
+  width: 45%;
   text-align: center;
   margin-top: 10vh;
   margin-bottom: 10vh;
-  border: 4px groove black;
+  border: 2px ridge black;
   border-radius: 3px;
-  padding: 1em;
+  padding-top: 1em;
   box-shadow: 5px 5px 5px #888888;
+  text-decoration: underline;
+  text-transform: uppercase;
 }
 
+.review img {
+  width: 90%;
+}
 @media (max-width:700px) {
-  #content {
+  #content2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .review {
+    width: 90%;
   }
 }
 
@@ -161,8 +169,8 @@ img.banner {
 }
 @media (max-width: 700px) {
   .person {
-    display: flex;
     flex-direction: column;
+    margin-top: 5vh;
   }
   .person img {
     order: 1;
@@ -203,7 +211,7 @@ img.banner {
   .list {
     text-align: center;
   }
-  #content {
+  #content5 {
     padding: 1em;
   }
 }
