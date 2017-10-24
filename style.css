@@ -8,7 +8,8 @@ body {
 
 /*Banner - Universal*/
 
-/*https://stackoverflow.com/questions/23238108/how-to-add-button-over-image-using-css */
+/*I learned how to put a button over an image from this stack overflow question:
+https://stackoverflow.com/questions/23238108/how-to-add-button-over-image-using-css */
 
 .img-holder a {
   position: absolute;
@@ -16,6 +17,13 @@ body {
   top: 90vh;
 }
 
+@media (max-width:600px) {
+  .img-holder a {
+    position: absolute;
+    right: 50%
+    top: 85vh;
+  }
+}
 /* This is the hover effect for when it was a button... maybe try to put a hover overlay for the photo??
 .img-holder a:hover {
   background-color: rgba(83, 164, 116, 0.51);
