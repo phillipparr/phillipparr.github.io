@@ -20,7 +20,7 @@ https://stackoverflow.com/questions/23238108/how-to-add-button-over-image-using-
 @media (max-width:600px) {
   .img-holder a {
     position: absolute;
-    right: 50%
+    right: 50%;
     top: 60vh;
   }
 }
