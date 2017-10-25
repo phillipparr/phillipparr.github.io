@@ -7,9 +7,6 @@ body {
 
 /*Banner - Universal*/
 
-/*I learned how to put a button over an image from this stack overflow question:
-https://stackoverflow.com/questions/23238108/how-to-add-button-over-image-using-css */
-
 .img-holder a {
   position: absolute;
   right: 47%;
@@ -234,6 +231,7 @@ img.banner {
   }
   .list {
     text-align: center;
+    padding-left: 0;
   }
   #content5 {
     padding: 1em;
@@ -275,7 +273,6 @@ because of the parallax scrolling on this page*/
 
 .parallax::after {
   content: " ";
-  /*this is important but why!? ASK MARTIN*/
   position: absolute;
   top: 0;
   right: 0;

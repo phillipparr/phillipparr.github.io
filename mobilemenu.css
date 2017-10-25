@@ -27,7 +27,7 @@
 .site-wrap {
   min-width: 100%;
   min-height: 100vh;
-  background-color: rgb(241, 248, 249);
+  background-color: whitesmoke;
   position: relative;
   top: 0;
   bottom: 100%;
