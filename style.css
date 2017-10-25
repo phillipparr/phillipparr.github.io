@@ -1,7 +1,6 @@
 /*Body - Universal*/
 
 body {
-  font-family: sans-serif;
   font-family: 'Saira Extra Condensed', sans-serif;
 }
 
@@ -34,45 +33,33 @@ img.banner {
 
 /*Footer - Universal*/
 
-.flexwrap a {
-  text-decoration: none;
-  color: white;
-  font-family: sans-serif;
-  text-transform: uppercase;
-}
-
 .flexwrap {
   display: flex;
   align-items: center;
-  background-color: rgb(15, 6, 0);
-  color: white;
-  font-family: sans-serif;
+  background-color: whitesmoke;
+  color: black;
   width: 100vw;
-  border-radius: 5px;
-  bottom: 0;
   justify-content: space-around;
+  margin-top: 20vh;
+}
+
+.flexwrap a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  padding-right: 1em;
+}
+
+.flexwrap a:hover {
+  color: lightgray;
 }
 
 .center {
   text-align: center;
 }
 
-.left {
-  display: flex;
-  min-width: 25vh;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.fb, .insta {
-  padding-right: 1em;
-}
-
-.fa .fa-instagram {
-  font-size: 2.2em;
-}
-
-@media (max-width:810px) {
+@media (max-width:865px) {
   .right {
     display: flex;
     flex-direction: column;
@@ -113,6 +100,15 @@ img.banner {
   margin-right: 4em;
 }
 
+.goright a {
+  color: black;
+}
+.goright a:hover {
+  color: lightgray;
+}
+.goright i {
+  padding-top: .3em;
+}
 .third {
   margin-top: 10vh;
 }
@@ -227,10 +223,16 @@ img.banner {
   padding-top: 3em;
 }
 
-.list li {
-  padding-bottom: 3em;
+.pande a {
+  color: black;
 }
 
+.pande a:hover {
+  color: lightgray;
+}
+.map {
+  width: 50%;
+}
 @media (max-width:650px) {
   .flexbody {
     display: flex;
@@ -242,6 +244,9 @@ img.banner {
   }
   #content5 {
     padding: 1em;
+  }
+  .map {
+    width: 100%;
   }
 }
 
