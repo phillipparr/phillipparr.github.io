@@ -105,8 +105,6 @@
   background-size: cover;
 }
 
-
-
 @media (max-width:800px) {
   .links {
     display: flex;
@@ -123,6 +121,7 @@
     flex-direction: column;
   }
 }
+
 @media (max-width:600px) {
   .img-holder a {
     position: absolute;

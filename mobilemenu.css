@@ -19,11 +19,6 @@
   transition: color 0.2s, background 0.5s;
 }
 
-/*I can't make this work... ASK MARTIN!!*/
-.ntop a {
-  color: rgb(72, 72, 74);
-}
-
 .site-wrap {
   min-width: 100%;
   min-height: 100vh;
@@ -34,16 +29,19 @@
   left: 0;
   z-index: 1;
 }
+
 .nav-trigger {
   position: absolute;
   clip: rect(0, 0, 0, 0);
 }
+
 label[for="nav-trigger"] {
   position: fixed;
   right: 5vw;
   top: 4vh;
   z-index: 2;
 }
+
 label[for="nav-trigger"] div {
   width: 55px;
   height: 6px;
@@ -51,6 +49,7 @@ label[for="nav-trigger"] div {
   margin: 10px 0;
   transition: .7s;
 }
+
 .change .bar1 {
   transform: rotate(-405deg) translate(-12px, 9px);
 }
@@ -74,6 +73,7 @@ label[for="nav-trigger"] div {
 .nav-trigger:checked~.site-wrap {
   top: 100vh;
 }
+
 *, *:before, *:after {
   box-sizing: border-box;
   margin: 0;

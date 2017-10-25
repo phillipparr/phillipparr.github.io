@@ -21,6 +21,7 @@ img.banner {
   height: 100vh;
   box-shadow: 0 5px 5px -5px #333;
 }
+
 @media (max-width:600px) {
   img.banner {
     height: 50vh;
@@ -28,8 +29,8 @@ img.banner {
   .img-holder a {
     display: none;
   }
-
 }
+
 /*Footer - Universal*/
 
 .flexwrap a {
@@ -58,16 +59,18 @@ img.banner {
 .left {
   display: flex;
   min-width: 25vh;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
 }
 
 .fb, .insta {
   padding-right: 1em;
 }
+
 .fa .fa-instagram {
   font-size: 2.2em;
 }
+
 @media (max-width:810px) {
   .right {
     display: flex;
@@ -87,6 +90,7 @@ img.banner {
     max-width: 25vh;
   }
 }
+
 /*Home Page*/
 
 .all {
@@ -151,6 +155,7 @@ img.banner {
   width: 90%;
   height: 90%
 }
+
 @media (max-width:700px) {
   #content2 {
     display: flex;
@@ -188,6 +193,7 @@ img.banner {
   text-transform: uppercase;
   text-decoration: underline;
 }
+
 @media (max-width: 700px) {
   .person {
     flex-direction: column;
@@ -239,14 +245,17 @@ img.banner {
 }
 
 /*Menu Page*/
+
 /*Down arrow link just for the menu page because this is
 the only one that should still be displayed in mobile
 because of the parallax scrolling on this page*/
+
 .img-holdermenu a {
   position: absolute;
   right: 47%;
   top: 90vh;
 }
+
 @media (max-width: 600px) {
   .img-holdermenu a {
     position: absolute;
@@ -254,6 +263,7 @@ because of the parallax scrolling on this page*/
     top: 40vh;
   }
 }
+
 .wrapper {
   height: 100vh;
   overflow-x: hidden;
@@ -359,8 +369,6 @@ because of the parallax scrolling on this page*/
   background-image: url('images/sign copy.jpg');
   background-size: cover;
 }
-
-
 
 @media (max-width:800px) {
   .links {
