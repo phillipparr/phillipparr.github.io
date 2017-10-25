@@ -78,12 +78,15 @@ img.banner {
     display: flex;
     flex-direction: column;
   }
+  .right img {
+    padding-top: 1em;
+  }
   .left {
     flex-direction: column;
     min-width: 11vh;
     text-align: center;
-    justify-content: space-between;
     height: 22vh;
+    justify-content: center;
   }
   .center {
     max-width: 25vh;
