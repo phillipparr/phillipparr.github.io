@@ -78,6 +78,16 @@ img.banner {
     display: flex;
     flex-direction: column;
   }
+  .left {
+    flex-direction: column;
+    min-width: 11vh;
+    text-align: center;
+    justify-content: space-between;
+    height: 22vh;
+  }
+  .center {
+    max-width: 25vh;
+  }
 }
 /*Home Page*/
 
