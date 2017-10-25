@@ -41,7 +41,7 @@
 }
 
 label[for="nav-trigger"] {
-  position: fixed;
+  position: absolute;
   left: 2vw;
   top: 2vh;
   z-index: 2;
