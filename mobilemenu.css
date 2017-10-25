@@ -47,10 +47,9 @@ label[for="nav-trigger"] {
 label[for="nav-trigger"] div {
   width: 55px;
   height: 6px;
-  background-color: rgb(72, 72, 74);
+  background-color: rgb(15, 6, 0);
   margin: 10px 0;
   transition: .7s;
-  /*cursor: pointer; why isn't this working ASK MARTIN!!*/
 }
 .change .bar1 {
   transform: rotate(-405deg) translate(-12px, 9px);

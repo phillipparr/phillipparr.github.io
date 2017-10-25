@@ -12,22 +12,9 @@ https://stackoverflow.com/questions/23238108/how-to-add-button-over-image-using-
 
 .img-holder a {
   position: absolute;
-  right: 50%;
+  right: 47%;
   top: 90vh;
 }
-
-@media (max-width:320px) {
-  .img-holder a {
-    position: absolute;
-    right: 50%;
-    top: 80vh;
-  }
-}
-/* This is the hover effect for when it was a button... maybe try to put a hover overlay for the photo??
-.img-holder a:hover {
-  background-color: rgba(83, 164, 116, 0.51);
-  color: white;
-}*/
 
 img.banner {
   display: block;
@@ -37,7 +24,15 @@ img.banner {
   height: 100vh;
   box-shadow: 0 5px 5px -5px #333;
 }
+@media (max-width:600px) {
+  img.banner {
+    height: 50vh;
+  }
+  .img-holder a {
+    display: none;
+  }
 
+}
 /*Footer - Universal*/
 
 .flexwrap a {
@@ -50,7 +45,7 @@ img.banner {
 .flexwrap {
   display: flex;
   align-items: center;
-  background-color: rgb(33, 33, 34);
+  background-color: rgb(15, 6, 0);
   color: white;
   font-family: sans-serif;
   width: 100vw;
@@ -72,6 +67,9 @@ img.banner {
 
 .fb, .insta {
   padding-right: 1em;
+}
+.fa .fa-instagram {
+  font-size: 2.2em;
 }
 @media (max-width:810px) {
   .right {
@@ -243,7 +241,21 @@ img.banner {
 }
 
 /*Menu Page*/
-
+/*Down arrow link just for the menu page because this is
+the only one that should still be displayed in mobile
+because of the parallax scrolling on this page*/
+.img-holdermenu a {
+  position: absolute;
+  right: 47%;
+  top: 90vh;
+}
+@media (max-width: 600px) {
+  .img-holdermenu a {
+    position: absolute;
+    right: 45%;
+    top: 40vh;
+  }
+}
 .wrapper {
   height: 100vh;
   overflow-x: hidden;

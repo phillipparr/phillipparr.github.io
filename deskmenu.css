@@ -37,6 +37,7 @@
 .nav-trigger {
   position: absolute;
   clip: rect(0, 0, 0, 0);
+  cursor: pointer;
 }
 
 label[for="nav-trigger"] {
@@ -49,10 +50,9 @@ label[for="nav-trigger"] {
 label[for="nav-trigger"] div {
   width: 35px;
   height: 5px;
-  background-color: rgb(72, 72, 74);
+  background-color: rgb(40, 40, 42);
   margin: 6px 0;
   transition: .7s;
-  /*cursor: pointer; why isn't this working ASK MARTIN!!*/
 }
 
 .change .bar1 {
