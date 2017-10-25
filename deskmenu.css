@@ -26,7 +26,7 @@
 .site-wrap {
   min-width: 100%;
   min-height: 100vh;
-  background-color: rgb(241, 248, 249);
+  background-color: whitesmoke;
   position: relative;
   top: 0;
   bottom: 100%;
@@ -49,7 +49,7 @@ label[for="nav-trigger"] {
 label[for="nav-trigger"] div {
   width: 35px;
   height: 5px;
-  background-color: rgb(109, 194, 143);
+  background-color: rgb(72, 72, 74);
   margin: 6px 0;
   transition: .7s;
   /*cursor: pointer; why isn't this working ASK MARTIN!!*/

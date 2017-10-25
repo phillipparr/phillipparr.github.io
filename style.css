@@ -50,7 +50,7 @@ img.banner {
 .flexwrap {
   display: flex;
   align-items: center;
-  background-color: slategrey;
+  background-color: rgb(33, 33, 34);
   color: white;
   font-family: sans-serif;
   width: 100vw;
@@ -137,7 +137,7 @@ img.banner {
 }
 
 .review {
-  width: 45%;
+  width: 35%;
   text-align: center;
   margin-top: 10vh;
   margin-bottom: 10vh;
@@ -151,6 +151,7 @@ img.banner {
 
 .review img {
   width: 90%;
+  height: 90%
 }
 @media (max-width:700px) {
   #content2 {
