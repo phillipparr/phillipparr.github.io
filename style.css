@@ -284,7 +284,7 @@ because of the parallax scrolling on this page*/
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #f4f4f4;
 }
 
 .parallax::after {
@@ -300,18 +300,18 @@ because of the parallax scrolling on this page*/
 }
 
 .static {
-  background: snow;
+  background: #dcd0c0;
   height: 50vh;
   border-radius: 5px;
   justify-content: space-around;
   flex-direction: column;
-  color: rgb(4, 9, 79);
+  color: #373737;
 }
 
 .static span {
   padding-left: 2em;
   padding-right: 2em;
-  color: rgb(52, 3, 51);
+  color: #373737;
   font-size: 1.3em;
 }
 
@@ -323,7 +323,7 @@ because of the parallax scrolling on this page*/
 
 .static a {
   text-transform: uppercase;
-  color: rgb(4, 9, 79);
+  color: #373737;
   font-size: 2em;
   text-decoration: none;
 }
@@ -378,7 +378,7 @@ because of the parallax scrolling on this page*/
 
 .bg8 h1 a{
   text-decoration: none;
-  color: white;
+  color: #f4f4f4;
   text-transform: capitalize;
 }
 
