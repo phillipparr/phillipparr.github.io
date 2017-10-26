@@ -35,12 +35,13 @@ img.banner {
 
 .flexwrap {
   display: flex;
-  align-items: center;
+  /*align-items: center;*/
   background-color: whitesmoke;
   color: black;
   width: 100vw;
   justify-content: space-around;
   margin-top: 20vh;
+  align-items: baseline;
 }
 
 .flexwrap a {
@@ -53,14 +54,17 @@ img.banner {
 .flexwrap a:hover {
   color: lightgray;
 }
-
+.left a:not(:first-child) {
+  border-left: 1px solid black;
+  padding-left: .2em;
+}
 .center {
   text-align: center;
 }
 
 
 @media (max-width:865px) {
-  .right {
+  .right h1 {
     display: flex;
     flex-direction: column;
   }
@@ -68,14 +72,16 @@ img.banner {
     padding-top: 1em;
   }
   .left {
+    display: flex;
     flex-direction: column;
-    min-width: 11vh;
     text-align: center;
-    height: 22vh;
-    justify-content: center;
   }
   .center {
     max-width: 25vh;
+    padding-right: 2.5em;
+  }
+  .left a:not(:first-child) {
+    border-left: none;
   }
 }
 
@@ -132,25 +138,19 @@ img.banner {
   flex-grow: 1;
   width: 100vw;
   justify-content: space-around;
-  font-size: 1.1em;
+  text-align: center;
+  align-items: center;
 }
 
 .review {
-  width: 35%;
-  text-align: center;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
-  border: 2px ridge black;
-  border-radius: 3px;
-  padding-top: 1em;
-  box-shadow: 5px 5px 5px #888888;
-  text-decoration: underline;
-  text-transform: uppercase;
+  width: 45%;
+  max-height: 30vh;
+  padding-top: 2em;
 }
 
 .review img {
-  width: 90%;
-  height: 90%
+  max-width: 90%;
+  max-height: 80%
 }
 
 @media (max-width:700px) {
@@ -191,7 +191,7 @@ img.banner {
   text-decoration: underline;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 865px) {
   .person {
     flex-direction: column;
     margin-top: 5vh;
@@ -390,8 +390,8 @@ because of the parallax scrolling on this page*/
   .static {
     font-size: .7em;
   }
-  .static span {
-    padding: 0;
+  .static h2 {
+    text-align: center;
   }
   .static h3 {
     display: flex;
