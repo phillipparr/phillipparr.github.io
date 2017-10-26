@@ -188,7 +188,6 @@ img.banner {
 .familytitle {
   text-align: center;
   text-transform: uppercase;
-  text-decoration: underline;
 }
 
 @media (max-width: 865px) {
@@ -233,6 +232,7 @@ img.banner {
 .map {
   width: 50%;
 }
+
 @media (max-width:650px) {
   .flexbody {
     display: flex;
@@ -260,14 +260,6 @@ because of the parallax scrolling on this page*/
   position: absolute;
   right: 47%;
   top: 90vh;
-}
-
-@media (max-width: 600px) {
-  .img-holdermenu a {
-    position: absolute;
-    right: 45%;
-    top: 40vh;
-  }
 }
 
 .wrapper {
@@ -301,7 +293,7 @@ because of the parallax scrolling on this page*/
 
 .static {
   background: #dcd0c0;
-  height: 50vh;
+  height: 70vh;
   border-radius: 5px;
   justify-content: space-around;
   flex-direction: column;
@@ -327,9 +319,12 @@ because of the parallax scrolling on this page*/
   font-size: 2em;
   text-decoration: none;
 }
-
+.static a:hover {
+  color: #c0b283;
+}
 .section h1 {
-  font-size: 5em;
+  font-size: 4em;
+  text-shadow: 4px 4px 3px rgba(44, 46, 47, 0.82);
 }
 
 .static h4 {
@@ -380,6 +375,16 @@ because of the parallax scrolling on this page*/
   text-decoration: none;
   color: #f4f4f4;
   text-transform: capitalize;
+}
+.bg8 h1 a:hover {
+  color: #c0b283;
+}
+@media (max-width: 600px) {
+  .img-holdermenu a {
+    position: absolute;
+    right: 45%;
+    top: 40vh;
+  }
 }
 
 @media (max-width:800px) {
