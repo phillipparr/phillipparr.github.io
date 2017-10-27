@@ -21,7 +21,9 @@ img.banner {
   box-shadow: 0 5px 5px -5px #333;
   top: 0;
 }
-
+.ntop ul {
+  list-style: none;
+}
 @media (max-width:600px) {
   img.banner {
     height: 50vh;
@@ -35,7 +37,6 @@ img.banner {
 
 .flexwrap {
   display: flex;
-  /*align-items: center;*/
   background-color: whitesmoke;
   color: black;
   width: 100vw;
@@ -322,8 +323,8 @@ because of the parallax scrolling on this page*/
 .static a:hover {
   color: #c0b283;
 }
-.section h1 {
-  font-size: 4em;
+.section .menuheading {
+  font-size: 4.5em;
   text-shadow: 4px 4px 3px rgba(44, 46, 47, 0.82);
 }
 
@@ -371,12 +372,12 @@ because of the parallax scrolling on this page*/
   background-size: cover;
 }
 
-.bg8 h1 a{
+.bg8 h2 a{
   text-decoration: none;
   color: #f4f4f4;
   text-transform: capitalize;
 }
-.bg8 h1 a:hover {
+.bg8 h2 a:hover {
   color: #c0b283;
 }
 @media (max-width: 600px) {

@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" media="screen and (min-device-width: 700px)" href="deskmenu.css">
-  <link rel="stylesheet" media="screen and (max-device-width: 700px)" href="mobilemenu.css">
+  <link rel="stylesheet" media="screen and (min-width: 700px)" href="deskmenu.css">
+  <link rel="stylesheet" media="screen and (max-width: 700px)" href="mobilemenu.css">
   <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="text/javascript" src="script.js"></script>
@@ -14,19 +14,21 @@
 </head>
 
 <body>
-  <nav class="ntop">
-    <li><a href="index.html">home</a></li>
-    <li><a href="press.html">press</a></li>
-    <li><a href="family.html">family</a></li>
-    <li><a href="menu.html">menu</a></li>
-    <li><a href="contact.html">contact</a></li>
-  </nav>
   <input type="checkbox" id="nav-trigger" class="nav-trigger" />
   <label for="nav-trigger" onclick="myFunction(this)">
     <div class="bar1"></div>
     <div class="bar2"></div>
     <div class="bar3"></div>
   </label>
+  <nav class="ntop">
+    <ul>
+      <li><a href="index.html">home</a></li>
+      <li><a href="press.html">press</a></li>
+      <li><a href="family.html">family</a></li>
+      <li><a href="menu.html">menu</a></li>
+      <li><a href="contact.html">contact</a></li>
+    </ul>
+  </nav>
 
   <div class="site-wrap">
     <div class="img-holdermenu">
@@ -39,18 +41,18 @@
 is where the universal content begins again-->
     <main id='content4' class="wrapper">
       <section id="top" class="section parallax bg1">
-        <h1>Menu</h1>
+        <h2 class="menuheading">Menu</h2>
       </section>
-      <section class="section static links">
+      <nav class="section static links">
         <a href="#taco">tacos</a>
         <a href="#burrito">burritos</a>
         <a href="#torta">tortas</a>
         <a href="#burger">burgers</a>
         <a href="#meat">meats</a>
         <a href="#drink">drinks</a>
-      </section>
+      </nav>
       <section id="taco" class="section parallax bg2">
-        <h1>Tacos</h1>
+        <h2 class="menuheading">Tacos</h2>
       </section>
       <section class="section static">
         <h2>All tacos are served on two house-made corn tortillas with your choice of meat:</h2>
@@ -64,7 +66,7 @@ is where the universal content begins again-->
         <h4>$2.75</h4>
       </section>
       <section id="burrito" class="section parallax bg3">
-        <h1>Burritos</h1>
+        <h2 class="menuheading">Burritos</h2>
       </section>
       <section class="section static">
         <h2>All burritos are served on a house-made flour tortilla with your choice of meat or vegetarian:</h2>
@@ -79,7 +81,7 @@ is where the universal content begins again-->
         <h4>$4.75</h4>
       </section>
       <section id="torta" class="section parallax bg4">
-        <h1>Tortas</h1>
+        <h2 class="menuheading">Tortas</h2>
       </section>
       <section class="section static">
         <h2>All tortas are served on a house-made bolillo with your choice of meat:</h2>
@@ -93,7 +95,7 @@ is where the universal content begins again-->
         <h4>$4.75</h4>
       </section>
       <section id="burger" class="section parallax bg5">
-        <h1>Burgers</h1>
+        <h2 class="menuheading">Burgers</h2>
       </section>
       <section class="section static">
         <h2>Burgers are served with lettuce, tomato, onion, pickles, and ketchup</h2>
@@ -103,7 +105,7 @@ is where the universal content begins again-->
         <h4>Double/Double: $4.50</h4>
       </section>
       <section id="meat" class="section parallax bg6">
-        <h1>Meats</h1>
+        <h2 class="menuheading">Meats</h2>
       </section>
       <section class="section static">
         <h2>Carnitas: Pulled pork slow cooked with orange, lime and a blend of spices.</h2>
@@ -112,7 +114,7 @@ is where the universal content begins again-->
         <h2>Cochinita Pibil: Pulled pork slow cooked in a banana leaf</h2>
       </section>
       <section id="drink" class="section parallax bg7">
-        <h1>Drinks</h1>
+        <h2 class="menuheading">Drinks</h2>
       </section>
       <section class="section static">
         <h2>Lemonade</h2>
@@ -122,9 +124,9 @@ is where the universal content begins again-->
         <h4>$1</h4>
       </section>
       <section class="section parallax bg8">
-        <h1>
+        <h2 class="menuheading">
           <a href="#top">top</a>
-        </h1>
+        </h2>
       </section>
       <!-- Footer: This is where the universal content begins again -->
       <footer class="flexwrap">

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" media="screen and (min-device-width: 700px)" href="deskmenu.css">
-  <link rel="stylesheet" media="screen and (max-device-width: 700px)" href="mobilemenu.css">
+  <link rel="stylesheet" media="screen and (min-width: 700px)" href="deskmenu.css">
+  <link rel="stylesheet" media="screen and (max-width: 700px)" href="mobilemenu.css">
   <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="text/javascript" src="script.js"></script>
@@ -14,19 +14,21 @@
 </head>
 
 <body>
-  <nav class="ntop">
-    <li><a href="index.html">home</a></li>
-    <li><a href="press.html">press</a></li>
-    <li><a href="family.html">family</a></li>
-    <li><a href="menu.html">menu</a></li>
-    <li><a href="contact.html">contact</a></li>
-  </nav>
   <input type="checkbox" id="nav-trigger" class="nav-trigger" />
   <label for="nav-trigger" onclick="myFunction(this)">
     <div class="bar1"></div>
     <div class="bar2"></div>
     <div class="bar3"></div>
   </label>
+  <nav class="ntop">
+    <ul>
+      <li><a href="index.html">home</a></li>
+      <li><a href="press.html">press</a></li>
+      <li><a href="family.html">family</a></li>
+      <li><a href="menu.html">menu</a></li>
+      <li><a href="contact.html">contact</a></li>
+    </ul>
+  </nav>
 
   <div class="site-wrap">
     <div class="img-holder">
