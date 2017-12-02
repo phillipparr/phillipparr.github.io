@@ -1,5 +1,21 @@
-#cityscore {
+#weather {
+  border: 1px solid black;
+}
+#news {
+  border: 1px solid blue;
+  min-width: 50vw;
+}
+#total_city_score {
+  border: 1px solid red;
+}
+#city_scores {
+  border: 1px solid green;
+  min-width: 50vw;
+}
+#total_city_score {
   text-align: center;
-  padding-top: 50vh;
   font-size: 3em;
+}
+.flexbox1 {
+  display: flex;
 }

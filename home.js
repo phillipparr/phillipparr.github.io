@@ -2,7 +2,7 @@
 
 var url = 'https://api.teleport.org/api/urban_areas/';
 
-   fetch(url)
+  fetch(url)
       .then(function(response) {
         return response.json();
       })
@@ -30,10 +30,8 @@ var assembleKey = function(parameters) {
   var para_list = [];
   for (var key in parameters) {
     if (parameters.hasOwnProperty(key)) {
-      console.log(parameters[key]);
       var para_string = encodeURIComponent(key) + ":" + encodeURIComponent(parameters[key]);
       para_list.push(para_string);
-      console.log(para_string);
     }
 
  }
@@ -42,7 +40,7 @@ var assembleKey = function(parameters) {
 
 var url = 'https://api.teleport.org/api/urban_areas/';
 let params = {
-  slug:"aarhus",
+  slug:"cardiff",
 }
 
 var query_url = url + assembleKey(params) +"/scores/";
@@ -63,8 +61,24 @@ var query_url = url + assembleKey(params) +"/scores/";
         var intvalue = Math.round(results1);
         console.log(results);
         console.log(results1)
-        document.getElementById("cityscore").innerHTML = "Quality of Life Score: " + intvalue;
-        document.getElementById("housingscore").innerHTML = "Housing Score(/10): " + results[0].score_out_of_10;
+        var intscores = function(results) {
+          var intscores = [];
+          for (var i in results) {
+            intscore = Math.round(results[i].score_out_of_10);
+            intscores.push(intscore);
+          }
+          return intscores;
+        };
+        var roundedScores = intscores(results);
+        console.log(intscores);
+        document.getElementById("housing").innerHTML = "Housing: " + roundedScores[0];
+        document.getElementById("cost_of_living").innerHTML = "Cost Of Living: " + roundedScores[1];
+        document.getElementById("safety").innerHTML = "Safety: " + roundedScores[7];
+        document.getElementById("economy").innerHTML = "Economy: " + roundedScores[11];
+        document.getElementById("leisure_culture").innerHTML = "Leisure & Culture: " + roundedScores[14];
+        document.getElementById("healthcare").innerHTML = "Healthcare: " + roundedScores[8];
+        document.getElementById("environmental_quality").innerHTML = "Environmental Quality: " + roundedScores[10];
+        document.getElementById("total_city_score").innerHTML = "Quality of Life Score: " + intvalue;
       })
 // NEWS API Key: Your API key is: d629a7dfe79f4f86a47daf27e5a39c53
 var assembleKey1 = function(parameters) {
@@ -82,7 +96,7 @@ var assembleKey1 = function(parameters) {
 
 var url = 'https://newsapi.org/v2/everything';
 let parames = {
-  q:"london",
+  q:"cardiff",
   from:"2017-12-01",
   sortBy: "popularity",
   apiKey: "d629a7dfe79f4f86a47daf27e5a39c53"
@@ -101,22 +115,19 @@ var query_url = url + "?" + assembleKey1(parames);
 
      .then(function(data) {
         var results = data.articles;
+        //I managed to add the title but I want to add the links...
         console.log(results);
-        document.getElementById("articles").innerHTML = "articles: " + results[0].title;
+        headline1link = results[0].url;
+        console.log(headline1link);
+        document.getElementById("article1").innerHTML = results[0].title;
+        document.getElementById("article2").innerHTML = results[1].title;
+        document.getElementById("article3").innerHTML = results[2].title;
+        document.getElementById("article4").innerHTML = results[3].title;
+        document.getElementById("article5").innerHTML = results[4].title;
+        document.getElementById("article6").innerHTML = results[5].title;
       })
 //Weather API Key: Your API Key: e324ec4975e24b42a5dc26acf9346d20
-var assembleKey2 = function(parameters) {
-  var para_list = [];
-  for (var key in parameters) {
-    if (parameters.hasOwnProperty(key)) {
-      var para_string = encodeURIComponent(key) + "=" + encodeURIComponent(parameters[key]);
-      para_list.push(para_string);
-    }
 
- }
-  return para_list.join("&");
-
-}
 
 var url = 'http://api.weatherbit.io/v2.0/current';
 let paramets = {
@@ -124,7 +135,7 @@ let paramets = {
   key: "e324ec4975e24b42a5dc26acf9346d20"
 }
 
-var query_url = url + "?" + assembleKey2(paramets);
+var query_url = url + "?" + assembleKey1(paramets);
     console.log(query_url);
 
 
@@ -136,7 +147,22 @@ var query_url = url + "?" + assembleKey2(paramets);
       })
 
      .then(function(data) {
-        var results = data.data[0].app_temp;
+        var temp = data.data[0].app_temp;
+        var description = data.data[0].weather.description;
+        var wind_speed = data.data[0].wind_spd;
+        var wind_dir = data.data[0].wind_cdir_full;
+        var precip=data.data[0].precip;
+        var sunrise = data.data[0].sunrise;
+        var sunset=data.data[0].sunset;
+        var results = data;
+        console.log(wind_speed);
+        console.log(wind_dir);
         console.log(results);
-        document.getElementById("temp").innerHTML = "temp: " + results;
+        document.getElementById("temp").innerHTML = "Temperature: " + temp + " Celsius";
+        document.getElementById("description").innerHTML = "Description: " + description;
+        document.getElementById("rain").innerHTML = "Precipitation: " + precip + " mm";
+        document.getElementById("wind_speed").innerHTML = "Wind Speed: " + wind_speed + " m/s";
+        document.getElementById("wind_dir").innerHTML = "Wind Direction: " + wind_dir;
+        document.getElementById("sunrise").innerHTML = "Wind Speed: " + sunrise;
+        document.getElementById("sunset").innerHTML = "Wind Direction: " + sunset;
       })
