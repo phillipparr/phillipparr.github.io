@@ -13,20 +13,13 @@ var url = 'https://api.teleport.org/api/urban_areas/';
         for (var i=0; i < results.length; i++) {
           cities.push(results[i].name)
         }
-
         citylist(cities);
       });
 
 //trying to access the list of cities in the variable "results" from the function
 //above outside of that function to use it as the parameter for the API request below
   var citylist = function(array) {
-    var cities = array;
-    Array.prototype.randomElement = function () {
-      return this[Math.floor(Math.random() * this.length)];
-    }
-    var randomCity = cities.randomElement();
-    console.log(randomCity);
-    params(randomCity);
+    console.log(array);
   }
 
 // var cities = citylist();
@@ -48,12 +41,9 @@ var assembleKey = function(parameters) {
 }
 
 var url = 'https://api.teleport.org/api/urban_areas/';
-
-var params = function(randomCity) {
-  var city = randomCity.toLowerCase();
-  console.log(city);
-  slug:city
-};
+let params = {
+  slug:"aarhus",
+}
 
 var query_url = url + assembleKey(params) +"/scores/";
     console.log(query_url);
