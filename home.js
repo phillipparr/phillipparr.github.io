@@ -70,7 +70,6 @@ var query_url = url + assembleKey(params) +"/scores/";
           return intscores;
         };
         var roundedScores = intscores(results);
-        console.log(intscores);
         document.getElementById("housing").innerHTML = "Housing: " + roundedScores[0];
         document.getElementById("cost_of_living").innerHTML = "Cost Of Living: " + roundedScores[1];
         document.getElementById("safety").innerHTML = "Safety: " + roundedScores[7];
