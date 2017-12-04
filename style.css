@@ -1,21 +1,105 @@
+body {
+  background-color: ghostwhite;
+}
 #weather {
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 35vh;
+  background-color: whitesmoke;
+  /*border: 2px solid #9DB5B2;*/
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px grey;
+  width: 35vw;
+  text-align: center;
+  color: #191919;
+}
+#whoknows {
+  background-color: whitesmoke;
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px grey;
+  width: 35vw;
+  text-align: center;
+  color: #191919;
 }
 #news {
-  border: 1px solid blue;
-  min-width: 50vw;
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: whitesmoke;
+  /*border: 2px solid #9DB5B2;*/
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px grey;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  text-align: center;
+
 }
-#total_city_score {
-  border: 1px solid red;
+#news a {
+  text-decoration: none;
+  color: black;
+}
+#news a:hover {
+  color: grey;
 }
 #city_scores {
-  border: 1px solid green;
-  min-width: 50vw;
-}
-#total_city_score {
-  text-align: center;
-  font-size: 3em;
-}
-.flexbox1 {
+  padding: 1%;
+  width: 35vw;
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: whitesmoke;
+  /*border: 2px solid #9DB5B2;*/
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px grey;
+  text-align: center;
+
+}
+#cityinfo {
+  text-align: center;
+  font-size: 2em;
+  width: 40vw;
+
+
+}
+#flexbox1 {
+  display: flex;
+  justify-content: space-between;
+  height: 35vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  color: #191919;
+}
+p {
+  text-decoration: underline;
+}
+#flexbox2 {
+  display: flex;
+  margin: 5vh 5vw 5vh 5vw;
+}
+#flexbox3 {
+  display: flex;
+  height: 35vh;
+  justify-content: space-between;
+  margin-right: 5vw;
+  margin-left: 5vw;
+
+}
+#newcity {
+  display: flex;
+  width: 30vw;
+  align-items: center;
+  justify-content: center;
+
+}
+/*Start Page*/
+.startbutton {
+  margin: 40vh 40vw 40vh 40vw;
+  background-color: linen;
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px grey;
+  max-width: 7vw;
+  max-height: 15vh;
+  text-align: center;
 }

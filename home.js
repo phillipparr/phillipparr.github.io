@@ -9,28 +9,21 @@ var url = 'https://api.teleport.org/api/urban_areas/';
 
      .then(function(data) {
         var results = data._links["ua:item"];
-        var cities =[]
-        for (var i=0; i < results.length; i++) {
-          cities.push(results[i].name)
-        }
-        citylist(cities);
+        citylist(results);
       });
 
 //trying to access the list of cities in the variable "results" from the function
 //above outside of that function to use it as the parameter for the API requests below
   var citylist = function(array) {
-    console.log(array)
-    var randomCity = array[Math.floor(Math.random()*array.length)].toLowerCase();
+    var randomCity = array[Math.floor(Math.random()*array.length)];
     console.log(randomCity);
-    teleportAPI(randomCity);
-    newsAPI(randomCity);
-    weatherAPI(randomCity);
+    teleportAPI(randomCity.href);
+    newsAPI(randomCity.name);
+    weatherAPI(randomCity.name);
+    // teleportAPIphotos(randomCity.href);
   }
 
-// var cities = citylist();
-// var randomItem = cities[Math.floor(Math.random()*cities.length)];
-// console.log(randomItem);
-//QOL SCORE
+//QOL SCORES
 var assembleKey = function(parameters) {
   var para_list = [];
   for (var key in parameters) {
@@ -44,11 +37,7 @@ var assembleKey = function(parameters) {
 }
 
 function teleportAPI(city) {
-  var url = 'https://api.teleport.org/api/urban_areas/';
-  let params = {
-    slug:city,
-  }
-  var query_url = url + assembleKey(params) +"/scores/";
+  var query_url = city +"scores/";
       console.log(query_url);
 
      fetch(query_url)
@@ -60,8 +49,6 @@ function teleportAPI(city) {
           var results = data.categories;
           var results1 = data.teleport_city_score;
           var intvalue = Math.round(results1);
-          console.log(results);
-          console.log(results1)
           var intscores = function(results) {
             var intscores = [];
             for (var i in results) {
@@ -84,7 +71,41 @@ function teleportAPI(city) {
 }
 
 
+//Teleport Photos
+/*
+var assembleKey = function(parameters) {
+  var para_list = [];
+  for (var key in parameters) {
+    if (parameters.hasOwnProperty(key)) {
+      var para_string = encodeURIComponent(key) + ":" + encodeURIComponent(parameters[key]);
+      para_list.push(para_string);
+    }
 
+ }
+  return para_list;
+}
+
+function teleportAPIphotos(city) {
+  var query_url = city +"images/";
+      console.log(query_url);
+
+     fetch(query_url)
+        .then(function(response) {
+          return response.json();
+        })
+
+       .then(function(data) {
+          var results = data.photos[0].image.web;
+          console.log(results);
+          var image = document.createElement('img');
+          image.src = results;
+          image.width=300;
+          image.height=300;
+          document.getElementById('photos').appendChild(image);
+        });
+
+}
+*/
 // NEWS API Key: Your API key is: d629a7dfe79f4f86a47daf27e5a39c53
 var assembleKey1 = function(parameters) {
   var para_list = [];
@@ -120,16 +141,16 @@ function newsAPI(city) {
 
        .then(function(data) {
           var results = data.articles;
-          //I managed to add the title but I want to add the links...
           console.log(results);
-          headline1link = results[0].url;
-          console.log(headline1link);
-          document.getElementById("article1").innerHTML = results[0].title;
-          document.getElementById("article2").innerHTML = results[1].title;
-          document.getElementById("article3").innerHTML = results[2].title;
-          document.getElementById("article4").innerHTML = results[3].title;
-          document.getElementById("article5").innerHTML = results[4].title;
-          document.getElementById("article6").innerHTML = results[5].title;
+          document.getElementById("cityname").innerHTML = city
+
+          for(let i = 0; i < 6; i++) {
+            var link = document.createElement('a');
+            link.setAttribute('target','_blank');
+            link.href = results[i].url;
+            link.appendChild(document.createTextNode(results[i].title));
+            document.getElementById("article" + (i+1)).appendChild(link);
+          }
         });
   }
 //Weather API Key: Your API Key: e324ec4975e24b42a5dc26acf9346d20
