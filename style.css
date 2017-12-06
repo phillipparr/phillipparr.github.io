@@ -20,7 +20,6 @@ h3 {
 
 
 #city_scores {
-
   width: 35vw;
   display: flex;
   flex-direction: column;
@@ -28,14 +27,7 @@ h3 {
   border-radius: 8px;
   text-align: center;
   line-height: 1.7em;
-
 }
-
-/*@media (max-width: 800px) {
-  #flexbox1 {
-    font-size: 1.2em;
-  }
-}*/
 
 #weather {
   display: flex;
@@ -121,8 +113,20 @@ footer a {
 footer a:hover {
   color: turquoise;
 }
+/*Media Queries*/
 @media (max-width: 800px) {
   footer {
     position: relative;
+  }
+}
+@media (max-width: 800px) {
+  #flexbox1 {
+    font-size: 1.4em;
+  }
+  #news {
+    font-size: 1.4em
+  }
+  #cityinfo {
+    font-size: 2.4em;
   }
 }
