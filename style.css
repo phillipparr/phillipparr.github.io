@@ -11,10 +11,11 @@ h3 {
 /*Top Section: City Scores and News*/
 #flexbox1 {
   display: flex;
-  height: 35vh;
+  /*height: 35vh;*/
   justify-content: space-between;
   margin-right: 5vw;
   margin-left: 5vw;
+  color: rgb(29, 22, 50);
 }
 
 
@@ -30,16 +31,16 @@ h3 {
 
 }
 
-@media (max-width: 800px) {
-  #city_scores {
-    font-size: 4em;
-    line-height: 2.5em;
+/*@media (max-width: 800px) {
+  #flexbox1 {
+    font-size: 1.2em;
   }
-}
+}*/
+
 #weather {
   display: flex;
   flex-direction: column;
-  height: 35vh;
+  /*height: 35vh;*/
   background-color: rgba(239, 245, 245, 0.8);
   border-radius: 8px;
   width: 35vw;
@@ -51,9 +52,9 @@ h3 {
 #flexbox2 {
   display: flex;
   margin: 5vh 10vw;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  color: white;
+  color: rgb(29, 22, 50);
 }
 
 #cityinfo {
@@ -61,8 +62,11 @@ h3 {
   font-size: 2em;
   width: 40vw;
 }
+#city_summary {
+  font-size: 1em;
+}
 #random {
-    background-color: slategrey;
+    background-color: darkcyan;
     color: white;
     padding: 14px;
     font-size: 14px;
@@ -71,17 +75,10 @@ h3 {
     transition: background-color .5s;
 }
 #random:hover {
-  background-color: blue;
+  background-color: turquoise;
 }
 
 /*Bottom Section: Weather and unknown*/
-/*#flexbox3 {
-  display: flex;
-  height: 35vh;
-  justify-content: space-between;
-  margin-right: 5vw;
-  border
-}*/
 #news {
   margin: 0 auto;
   width: 70vw;
@@ -93,31 +90,39 @@ h3 {
   border-radius: 8px;
   font-size: 1.1em;
   text-align: center;
+  color: rgb(29, 22, 50);
 }
 
 #news a {
   text-decoration: none;
   line-height: 1.5em;
-  color: midnightblue;
+  color: rgb(29, 22, 50);
 }
 #news a:hover {
-  color: grey;
+  color: darkcyan;
 }
 
-/*#whoknows {
-  background-color: rgba(239, 245, 245, 0.8);
-  border-radius: 8px;
-  width: 35vw;
-  text-align: center;
-}*/
 /*Footer*/
 footer {
-  color: slategrey;
-  font-size: 1.2em;
+  color: rgb(29, 22, 50);
+  font-size: 1.3em;
   text-align: center;
   padding-bottom: 5px;
   bottom: 0;
   left: 0;
   right: 0;
   position: absolute;
+  background-color: rgba(176, 198, 208, 0.80);
+}
+footer a {
+  text-decoration: none;
+  color: rgb(29, 22, 50);
+}
+footer a:hover {
+  color: turquoise;
+}
+@media (max-width: 800px) {
+  footer {
+    position: relative;
+  }
 }

@@ -4,7 +4,8 @@ function show_content() {
     main.style.display = "block";
     var about = document.getElementById('about');
     about.style.display = "none";
-
+    var footer = document.getElementById('footer');
+    footer.style.display = "none";
 
 }
 
@@ -36,17 +37,13 @@ var url = 'https://api.teleport.org/api/urban_areas/';
     teleportAPI(randomCity.href);
     newsAPI(randomCity.name);
     weatherAPI(randomCity.name);
-    teleportAPIphotos(randomCity.href);
     document.getElementById('random').addEventListener('click', function(){
       var randomCity = array[Math.floor(Math.random()*array.length)];
       console.log(randomCity);
       teleportAPI(randomCity.href);
       newsAPI(randomCity.name);
       weatherAPI(randomCity.name);
-      teleportAPIphotos(randomCity.href);
-
       })
-
   }
 // Dropdown
 function dropdown(cities) {
@@ -59,7 +56,6 @@ function dropdown(cities) {
       teleportAPI(cities[i].href);
       newsAPI(cities[i].name);
       weatherAPI(cities[i].name);
-      teleportAPIphotos(cities[i].href);
     })
   }
 
@@ -109,41 +105,6 @@ function teleportAPI(city) {
           document.getElementById("environmental_quality").innerHTML = "Environmental Quality: " + roundedScores[10];
           document.getElementById("total_city_score").innerHTML = "Quality of Life Score: " + intvalue;
         });
-
-}
-
-
-//Teleport Photos
-
-var assembleKey = function(parameters) {
-  var para_list = [];
-  for (var key in parameters) {
-    if (parameters.hasOwnProperty(key)) {
-      var para_string = encodeURIComponent(key) + ":" + encodeURIComponent(parameters[key]);
-      para_list.push(para_string);
-    }
-
- }
-  return para_list;
-}
-
-function teleportAPIphotos(city) {
-  var query_url = city +"images/";
-      console.log(query_url);
-
-     fetch(query_url)
-        .then(function(response) {
-          return response.json();
-        })
-
-       .then(function(data) {
-          var results = data.photos[0].image.web;
-          console.log(results);
-          var image = document.createElement('img');
-          image.src = results;
-          document.body.style.backgroundImage = image;
-        });
-
 }
 
 // NEWS API Key: Your API key is: d629a7dfe79f4f86a47daf27e5a39c53

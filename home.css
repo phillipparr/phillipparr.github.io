@@ -1,5 +1,6 @@
 body {
-  background-image: url('earth.jpg');
+  background: linear-gradient(0deg,rgba(58, 199, 251, 0.3),rgba(78, 214, 244, 0.3)), url('earth.jpg'), center;
+  font-family: Verdana, Geneva, sans-serif;
 }
 #about {
   margin: 0 auto;
@@ -10,19 +11,24 @@ body {
   height: 400px;
   padding: 15px;
   margin-top: 20vh;
-  font-size: 1.2em;
-  line-height: 1.5em;
+  line-height: 1.7em;
+  font-size: 1.1em;
+  color: rgb(29, 22, 50);
 }
 #about h1 {
   text-align: center;
 }
 #start_button {
-  background-color: silver;
+  background-color: darkcyan;
   border-radius: 3px;
-  padding: 10px;
-  margin-left: 37%;
+  margin-left: 40%;
   margin-top: 10px;
   cursor: pointer;
+  transition: color .5s;
+  border: none;
+  padding: 14px;
+  font-size: 14px;
+  color: white;
 }
 #start_button a {
   text-align: center;
@@ -30,6 +36,6 @@ body {
   font-size: 1.5em;
   color: black;
 }
-button:hover {
-  color: grey;
+#start_button:hover {
+  color: turquoise;
 }

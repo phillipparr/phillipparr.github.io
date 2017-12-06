@@ -12,11 +12,11 @@
     <div id="about">
       <h1>Welcome to City Snapshot</h1>
       <p>City Snapshot provides information about interesting cities around the world.
-        Here you will find the overall quality of life score (/100), specific scores (/10)
+        You will find the overall quality of life score (out of 100), specific scores (out of 10)
         for aspects of that city, such as cost of living, environmental quality, leisure
-        & culture, etc., today's weather, and the top six news stories about that city.
-        By clicking the start button below, City Snapshot will randomly generate an
-        interesting city for you to explore. From there, you can continue
+        & culture, etc., as well as today's weather, and articles related to the city.
+        By clicking the start button below, City Snapshot will randomly choose a
+        city for you to explore. From there you can continue
         generating random cities, or choose a city from the list.</p>
       <button id="start_button" onclick="javascript:show_content();">Start</button>
     </div>
@@ -24,7 +24,7 @@
     <main id="content">
       <div id="flexbox1">
         <div id="city_scores">
-          <h3>Scores ( /10)</h3>
+          <h3>Scores</h3>
           <div id='housing'></div>
           <div id='cost_of_living'></div>
           <div id='safety'></div>
@@ -46,15 +46,6 @@
           <div id="date_time"></div>
         </div>
 
-        <!-- <div id="news">
-          <h3>Headlines</h3>
-          <div id="article1"></div>
-          <div id="article2"></div>
-          <div id="article3"></div>
-          <div id="article4"></div>
-          <div id="article5"></div>
-          <div id="article6"></div>
-        </div> -->
       </div>
 
       <div id="flexbox2">
@@ -63,6 +54,7 @@
         <div id="cityinfo">
            <div id='cityname'></div>
            <div id='total_city_score'></div>
+
         </div>
 
         <div id=dropdown_container>
@@ -71,7 +63,7 @@
         </div>
 
       </div>
-
+      <div id="city_summary"></div>
       <div id="flexbox3">
         <div id="news">
           <h3>Headlines</h3>
@@ -82,23 +74,14 @@
           <div id="article5"></div>
           <div id="article6"></div>
         </div>
-        <!-- <div id="weather">
-          <h3>Weather</h3>
-          <div id="temp"></div>
-          <div id="description"></div>
-          <div id="rain"></div>
-          <div id="wind_speed"></div>
-          <div id="wind_dir"></div>
-          <div id="sunrise"></div>
-          <div id="sunset"></div>
-          <div id="date_time"></div>
-        </div> -->
-        <!-- <div id="whoknows">
-          <h3>What is this gonna be??</h3>
-        </div> -->
+
       </div>
     </main>
-
-    <footer>City Snapshot was built using Teleport, NewsAPI, and Weatherbit</footer>
+<!-- I had to give the footer an id because selecting by name to hide the footer "onclick"
+wasn't working -->
+    <footer id="footer">City Snapshot was built using <a href="https://teleport.org/my-cities/">Teleport</a>
+      , <a href="https://newsapi.org/">NewsAPI</a>, and
+      <a href="https://www.weatherbit.io/api/weather-current">Weatherbit</a>
+    </footer>
   </body>
 </html>
