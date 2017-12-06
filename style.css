@@ -1,105 +1,123 @@
-body {
-  background-color: ghostwhite;
+/*City Data CSS*/
+#content {
+  display: none;
+  margin-top: 0;
+}
+h3 {
+  text-decoration: underline;
+  margin: 0;
+}
+
+/*Top Section: City Scores and News*/
+#flexbox1 {
+  display: flex;
+  height: 35vh;
+  justify-content: space-between;
+  margin-right: 5vw;
+  margin-left: 5vw;
+}
+
+
+#city_scores {
+
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(239, 245, 245, 0.8);
+  border-radius: 8px;
+  text-align: center;
+  line-height: 1.7em;
+
+}
+
+@media (max-width: 800px) {
+  #city_scores {
+    font-size: 4em;
+    line-height: 2.5em;
+  }
 }
 #weather {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   height: 35vh;
-  background-color: whitesmoke;
-  /*border: 2px solid #9DB5B2;*/
+  background-color: rgba(239, 245, 245, 0.8);
   border-radius: 8px;
-  box-shadow: 5px 5px 10px grey;
   width: 35vw;
   text-align: center;
-  color: #191919;
+  line-height: 1.7em;
 }
-#whoknows {
-  background-color: whitesmoke;
-  border-radius: 8px;
-  box-shadow: 5px 5px 10px grey;
-  width: 35vw;
-  text-align: center;
-  color: #191919;
-}
-#news {
-  width: 35vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background-color: whitesmoke;
-  /*border: 2px solid #9DB5B2;*/
-  border-radius: 8px;
-  box-shadow: 5px 5px 10px grey;
-  padding-left: 1vw;
-  padding-right: 1vw;
-  text-align: center;
 
-}
-#news a {
-  text-decoration: none;
-  color: black;
-}
-#news a:hover {
-  color: grey;
-}
-#city_scores {
-  padding: 1%;
-  width: 35vw;
+/*Middle Section: Total city score, random button, and dropdown*/
+#flexbox2 {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background-color: whitesmoke;
-  /*border: 2px solid #9DB5B2;*/
-  border-radius: 8px;
-  box-shadow: 5px 5px 10px grey;
-  text-align: center;
-
+  margin: 5vh 10vw;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
+
 #cityinfo {
   text-align: center;
   font-size: 2em;
   width: 40vw;
+}
+#random {
+    background-color: slategrey;
+    color: white;
+    padding: 14px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    transition: background-color .5s;
+}
+#random:hover {
+  background-color: blue;
+}
 
-
-}
-#flexbox1 {
-  display: flex;
-  justify-content: space-between;
-  height: 35vh;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  color: #191919;
-}
-p {
-  text-decoration: underline;
-}
-#flexbox2 {
-  display: flex;
-  margin: 5vh 5vw 5vh 5vw;
-}
-#flexbox3 {
+/*Bottom Section: Weather and unknown*/
+/*#flexbox3 {
   display: flex;
   height: 35vh;
   justify-content: space-between;
   margin-right: 5vw;
-  margin-left: 5vw;
-
-}
-#newcity {
+  border
+}*/
+#news {
+  margin: 0 auto;
+  width: 70vw;
+  min-height: 35vh;
   display: flex;
-  width: 30vw;
-  align-items: center;
-  justify-content: center;
-
-}
-/*Start Page*/
-.startbutton {
-  margin: 40vh 40vw 40vh 40vw;
-  background-color: linen;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: rgba(239, 245, 245, 0.8);
   border-radius: 8px;
-  box-shadow: 3px 3px 10px grey;
-  max-width: 7vw;
-  max-height: 15vh;
+  font-size: 1.1em;
   text-align: center;
+}
+
+#news a {
+  text-decoration: none;
+  line-height: 1.5em;
+  color: midnightblue;
+}
+#news a:hover {
+  color: grey;
+}
+
+/*#whoknows {
+  background-color: rgba(239, 245, 245, 0.8);
+  border-radius: 8px;
+  width: 35vw;
+  text-align: center;
+}*/
+/*Footer*/
+footer {
+  color: slategrey;
+  font-size: 1.2em;
+  text-align: center;
+  padding-bottom: 5px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
 }

@@ -1,0 +1,35 @@
+body {
+  background-image: url('earth.jpg');
+}
+#about {
+  margin: 0 auto;
+  background-color: rgba(176, 198, 208, 0.80);
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px grey;
+  width: 600px;
+  height: 400px;
+  padding: 15px;
+  margin-top: 20vh;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+#about h1 {
+  text-align: center;
+}
+#start_button {
+  background-color: silver;
+  border-radius: 3px;
+  padding: 10px;
+  margin-left: 37%;
+  margin-top: 10px;
+  cursor: pointer;
+}
+#start_button a {
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: black;
+}
+button:hover {
+  color: grey;
+}

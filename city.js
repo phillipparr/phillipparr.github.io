@@ -1,3 +1,13 @@
+//Show content
+function show_content() {
+    var main = document.getElementById('content');
+    main.style.display = "block";
+    var about = document.getElementById('about');
+    about.style.display = "none";
+
+
+}
+
 //City names
 
 var url = 'https://api.teleport.org/api/urban_areas/';
@@ -10,6 +20,12 @@ var url = 'https://api.teleport.org/api/urban_areas/';
      .then(function(data) {
         var results = data._links["ua:item"];
         citylist(results);
+
+        var citynames = [];
+        for (var i=0; i < results.length; i++) {
+          citynames.push(results[i])
+        }
+        dropdown(citynames);
       });
 
 //trying to access the list of cities in the variable "results" from the function
@@ -20,8 +36,34 @@ var url = 'https://api.teleport.org/api/urban_areas/';
     teleportAPI(randomCity.href);
     newsAPI(randomCity.name);
     weatherAPI(randomCity.name);
-    // teleportAPIphotos(randomCity.href);
+    teleportAPIphotos(randomCity.href);
+    document.getElementById('random').addEventListener('click', function(){
+      var randomCity = array[Math.floor(Math.random()*array.length)];
+      console.log(randomCity);
+      teleportAPI(randomCity.href);
+      newsAPI(randomCity.name);
+      weatherAPI(randomCity.name);
+      teleportAPIphotos(randomCity.href);
+
+      })
+
   }
+// Dropdown
+function dropdown(cities) {
+  for (let i=0; i < cities.length; i++) {
+    var menuItem = document.createElement('li');
+    // menuItem.href = cities[i].href;
+    menuItem.appendChild(document.createTextNode(cities[i].name));
+    document.getElementById("dropdown").appendChild(menuItem);
+    menuItem.addEventListener('click', function(){
+      teleportAPI(cities[i].href);
+      newsAPI(cities[i].name);
+      weatherAPI(cities[i].name);
+      teleportAPIphotos(cities[i].href);
+    })
+  }
+
+}
 
 //QOL SCORES
 var assembleKey = function(parameters) {
@@ -72,7 +114,7 @@ function teleportAPI(city) {
 
 
 //Teleport Photos
-/*
+
 var assembleKey = function(parameters) {
   var para_list = [];
   for (var key in parameters) {
@@ -99,13 +141,11 @@ function teleportAPIphotos(city) {
           console.log(results);
           var image = document.createElement('img');
           image.src = results;
-          image.width=300;
-          image.height=300;
-          document.getElementById('photos').appendChild(image);
+          document.body.style.backgroundImage = image;
         });
 
 }
-*/
+
 // NEWS API Key: Your API key is: d629a7dfe79f4f86a47daf27e5a39c53
 var assembleKey1 = function(parameters) {
   var para_list = [];
@@ -146,10 +186,17 @@ function newsAPI(city) {
 
           for(let i = 0; i < 6; i++) {
             var link = document.createElement('a');
-            link.setAttribute('target','_blank');
+            link.setAttribute('target','_blank')
             link.href = results[i].url;
             link.appendChild(document.createTextNode(results[i].title));
-            document.getElementById("article" + (i+1)).appendChild(link);
+            if(document.getElementById("article" + (i+1)).hasChildNodes()) {
+                var articlediv = document.getElementById("article" + (i+1));
+                var oldlink = articlediv.childNodes[0];
+                articlediv.replaceChild(link, oldlink);
+            } else {
+              document.getElementById("article" + (i+1)).appendChild(link);
+            }
+
           }
         });
   }
@@ -180,6 +227,7 @@ function weatherAPI(city) {
           var precip=data.data[0].precip;
           var sunrise = data.data[0].sunrise;
           var sunset=data.data[0].sunset;
+          var date_time=data.data[0].ob_time;
           var results = data;
           console.log(wind_speed);
           console.log(wind_dir);
@@ -189,7 +237,8 @@ function weatherAPI(city) {
           document.getElementById("rain").innerHTML = "Precipitation: " + precip + " mm";
           document.getElementById("wind_speed").innerHTML = "Wind Speed: " + wind_speed + " m/s";
           document.getElementById("wind_dir").innerHTML = "Wind Direction: " + wind_dir;
-          document.getElementById("sunrise").innerHTML = "Sunrise: " + sunrise;
-          document.getElementById("sunset").innerHTML = "Sunset: " + sunset;
+          document.getElementById("sunrise").innerHTML = "Sunrise: " + sunrise + "GMT";
+          document.getElementById("sunset").innerHTML = "Sunset: " + sunset + "GMT";
+          document.getElementById("date_time").innerHTML = "Date & Time: " + date_time;
         });
 }
