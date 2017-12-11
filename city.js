@@ -49,7 +49,6 @@ var url = 'https://api.teleport.org/api/urban_areas/';
 function dropdown(cities) {
   for (let i=0; i < cities.length; i++) {
     var menuItem = document.createElement('li');
-    // menuItem.href = cities[i].href;
     menuItem.appendChild(document.createTextNode(cities[i].name));
     document.getElementById("dropdown").appendChild(menuItem);
     menuItem.addEventListener('click', function(){
@@ -84,6 +83,13 @@ function teleportAPI(city) {
         })
 
        .then(function(data) {
+          var str = data.summary;
+          console.log(str);
+          var removeby = str.replace(/<i>[\s\S]*?<br>/gi,'');
+          var removep = removeby.replace(/<p>[\s\S]*?<\/p>{2}/gi,'');
+          var removeempty = removep.replace(/When considering your preferences, this city does not have any category with a high rating\./gi,'');
+          var desired = removeempty.replace(/\.*<br>|<b>|<p>|<\/b>|<\/p>|According to our city rankings, /gi, '')
+          var final = desired.replace('this','This');
           var results = data.categories;
           var results1 = data.teleport_city_score;
           var intvalue = Math.round(results1);
@@ -104,6 +110,7 @@ function teleportAPI(city) {
           document.getElementById("healthcare").innerHTML = "Healthcare: " + roundedScores[8];
           document.getElementById("environmental_quality").innerHTML = "Environmental Quality: " + roundedScores[10];
           document.getElementById("total_city_score").innerHTML = "Quality of Life Score: " + intvalue;
+          document.getElementById("city_description").innerHTML = final;
         });
 }
 
@@ -189,10 +196,6 @@ function weatherAPI(city) {
           var sunrise = data.data[0].sunrise;
           var sunset=data.data[0].sunset;
           var date_time=data.data[0].ob_time;
-          var results = data;
-          console.log(wind_speed);
-          console.log(wind_dir);
-          console.log(results);
           document.getElementById("temp").innerHTML = "Temperature: " + temp + " Celsius";
           document.getElementById("description").innerHTML = "Description: " + description;
           document.getElementById("rain").innerHTML = "Precipitation: " + precip + " mm";

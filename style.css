@@ -43,7 +43,9 @@ h3 {
 /*Middle Section: Total city score, random button, and dropdown*/
 #flexbox2 {
   display: flex;
-  margin: 5vh 10vw;
+  margin-top: 3vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
   justify-content: space-between;
   align-items: center;
   color: rgb(29, 22, 50);
@@ -69,7 +71,14 @@ h3 {
 #random:hover {
   background-color: turquoise;
 }
-
+#city_description {
+  background-color: rgba(239, 245, 245, 0.8);
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-bottom: 3vh;
+  border-radius: 6px;
+  padding: 10px;
+}
 /*Bottom Section: Weather and unknown*/
 #news {
   margin: 0 auto;
@@ -80,7 +89,6 @@ h3 {
   flex-direction: column;
   background-color: rgba(239, 245, 245, 0.8);
   border-radius: 8px;
-  font-size: 1.1em;
   text-align: center;
   color: rgb(29, 22, 50);
 }
@@ -119,7 +127,7 @@ footer a:hover {
     position: relative;
   }
 }
-@media (max-width: 800px) {
+/*@media (max-width: 800px) {
   #flexbox1 {
     font-size: 1.4em;
   }
@@ -129,4 +137,4 @@ footer a:hover {
   #cityinfo {
     font-size: 2.4em;
   }
-}
+}*/
