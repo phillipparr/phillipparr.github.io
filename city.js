@@ -84,11 +84,10 @@ function teleportAPI(city) {
 
        .then(function(data) {
           var str = data.summary;
-          console.log(str);
           var removeby = str.replace(/<i>[\s\S]*?<br>/gi,'');
-          var removep = removeby.replace(/<p>[\s\S]*?<\/p>{2}/gi,'');
-          var removeempty = removep.replace(/When considering your preferences, this city does not have any category with a high rating\./gi,'');
-          var desired = removeempty.replace(/\.*<br>|<b>|<p>|<\/b>|<\/p>|According to our city rankings, /gi, '')
+          var removep = removeby.match(/(<p>[\s\S]*?<\/p>){1}/);
+          var removeempty = removep[0].replace(/When considering your preferences, this city does not have any category with a high rating\./gi,'');
+          var desired = removeempty.replace(/\.*<br>|<b>|<p>|<\/b>|<\/p>|According to our city rankings, |Our data reflects that /gi, '')
           var final = desired.replace('this','This');
           var results = data.categories;
           var results1 = data.teleport_city_score;
@@ -201,8 +200,8 @@ function weatherAPI(city) {
           document.getElementById("rain").innerHTML = "Precipitation: " + precip + " mm";
           document.getElementById("wind_speed").innerHTML = "Wind Speed: " + wind_speed + " m/s";
           document.getElementById("wind_dir").innerHTML = "Wind Direction: " + wind_dir;
-          document.getElementById("sunrise").innerHTML = "Sunrise: " + sunrise + "GMT";
-          document.getElementById("sunset").innerHTML = "Sunset: " + sunset + "GMT";
+          document.getElementById("sunrise").innerHTML = "Sunrise: " + sunrise + " GMT";
+          document.getElementById("sunset").innerHTML = "Sunset: " + sunset + " GMT";
           document.getElementById("date_time").innerHTML = "Date & Time: " + date_time;
         });
 }

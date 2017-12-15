@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(0deg,rgba(58, 199, 251, 0.3),rgba(78, 214, 244, 0.3)), url('earth.jpg'), center;
+  background: linear-gradient(0deg,rgba(145, 218, 246, 0.53),rgba(145, 218, 246, 0.53)), url('earth.jpg'), center;
   font-family: Verdana, Geneva, sans-serif;
 }
 #about {
