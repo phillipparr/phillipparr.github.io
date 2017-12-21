@@ -4,7 +4,7 @@
   margin-top: 0;
 }
 h3 {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   margin: 0;
 }
 
@@ -139,7 +139,7 @@ footer a:hover {
     position: relative;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 732px) {
   #flexbox1 {
     font-size: 1.4em;
   }
@@ -148,5 +148,8 @@ footer a:hover {
   }
   #cityinfo {
     font-size: 2.4em;
+  }
+  #city_description {
+    font-size: 1.4em;
   }
 }
