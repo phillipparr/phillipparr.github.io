@@ -23,29 +23,36 @@ h3 {
   width: 35vw;
   display: flex;
   flex-direction: column;
-  /*background-color: rgba(239, 245, 245, 0.8);*/
+  background-color: rgba(239, 245, 245, 0.8);
   border-radius: 8px;
-  border-top: 1px dashed black;
-  border-left: 1px dashed black;
+  /* border-top: 1px dashed black;
+  border-left: 1px dashed black; */
   text-align: center;
   line-height: 1.7em;
-  padding: 0;
+  /* padding-right: 5vw; */
 }
 
 #weather {
   display: flex;
   flex-direction: column;
   /*height: 35vh;*/
-  /*background-color: rgba(239, 245, 245, 0.8);*/
+  background-color: rgba(239, 245, 245, 0.8);
   border-radius: 8px;
   width: 35vw;
   text-align: center;
   line-height: 1.7em;
-  border-bottom: 1px dashed black;
-  border-right: 1px dashed black;
+  /* border-bottom: 1px dashed black;
+  border-right: 1px dashed black; */
+  /* padding-left: 5vw; */
 }
 
 /*Middle Section: Total city score, random button, and dropdown*/
+#section2 {
+  background-color: rgba(239, 245, 245, 0.8);
+  margin-left: 5vw;
+  margin-right: 5vw;
+  border-radius: 8px;
+}
 #flexbox2 {
   display: flex;
   margin-top: 3vh;
@@ -92,7 +99,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  /*background-color: rgba(239, 245, 245, 0.8);*/
+  background-color: rgba(239, 245, 245, 0.8);
   border-radius: 8px;
   text-align: center;
   color: rgb(29, 22, 50);
@@ -132,7 +139,7 @@ footer a:hover {
     position: relative;
   }
 }
-/*@media (max-width: 800px) {
+@media (max-width: 800px) {
   #flexbox1 {
     font-size: 1.4em;
   }
@@ -142,4 +149,4 @@ footer a:hover {
   #cityinfo {
     font-size: 2.4em;
   }
-}*/
+}
