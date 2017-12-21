@@ -9,24 +9,31 @@ h3 {
 }
 
 /*Top Section: City Scores and News*/
+#wrapper {
+  display: grid;
+  grid-template-columns: 40vw 59vw;
+  /* grid-template-rows: 36vh 36vh; */
+  /* border: 1px solid black; */
+}
 #flexbox1 {
   display: flex;
-  /*height: 35vh;*/
-  justify-content: space-between;
-  margin-right: 10vw;
-  margin-left: 10vw;
+  flex-direction: column;
+  /* justify-content: space-between; */
   color: rgb(29, 22, 50);
+  grid-column: 1 / 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 
 
 #city_scores {
-  width: 35vw;
+  /* width: 35vw; */
   display: flex;
   flex-direction: column;
   /*background-color: rgba(239, 245, 245, 0.8);*/
-  border-radius: 8px;
+  /* border-radius: 8px;
   border-top: 1px dashed black;
-  border-left: 1px dashed black;
+  border-left: 1px dashed black; */
   text-align: center;
   line-height: 1.7em;
   padding: 0;
@@ -37,12 +44,12 @@ h3 {
   flex-direction: column;
   /*height: 35vh;*/
   /*background-color: rgba(239, 245, 245, 0.8);*/
-  border-radius: 8px;
-  width: 35vw;
+  /* border-radius: 8px; */
+  /* width: 35vw; */
   text-align: center;
   line-height: 1.7em;
-  border-bottom: 1px dashed black;
-  border-right: 1px dashed black;
+  /* border-bottom: 1px dashed black;
+  border-right: 1px dashed black; */
 }
 
 /*Middle Section: Total city score, random button, and dropdown*/
@@ -86,16 +93,18 @@ h3 {
 }
 /*Bottom Section: Weather and unknown*/
 #news {
-  margin: 0 auto;
-  width: 70vw;
+  max-width: 50vw;
   min-height: 35vh;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  /*background-color: rgba(239, 245, 245, 0.8);*/
-  border-radius: 8px;
+  align-items: center;
   text-align: center;
   color: rgb(29, 22, 50);
+  margin-left: 3vw;
+  grid-column: 2 / 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 
 #news a {
