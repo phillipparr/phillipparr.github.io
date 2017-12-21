@@ -1,49 +1,41 @@
-/*City Data CSS*/
+/*Styling for the main content*/
+/* Show the previously hidden content after the about section is hidden */
 #content {
   display: none;
   margin-top: 0;
 }
+/* style the headings of the news, weather and scores boxes */
 h3 {
-  /* text-decoration: underline; */
-  margin: 0;
+  margin: 1px;
 }
 
-/*Top Section: City Scores and News*/
+/*Top Section: City Scores and Weather*/
 #flexbox1 {
   display: flex;
-  /*height: 35vh;*/
   justify-content: space-between;
   margin-right: 10vw;
   margin-left: 10vw;
   color: rgb(29, 22, 50);
 }
 
-
-#city_scores {
+#cityScores {
   width: 35vw;
   display: flex;
   flex-direction: column;
   background-color: rgba(239, 245, 245, 0.8);
   border-radius: 8px;
-  /* border-top: 1px dashed black;
-  border-left: 1px dashed black; */
   text-align: center;
   line-height: 1.7em;
-  /* padding-right: 5vw; */
 }
 
 #weather {
   display: flex;
   flex-direction: column;
-  /*height: 35vh;*/
   background-color: rgba(239, 245, 245, 0.8);
   border-radius: 8px;
   width: 35vw;
   text-align: center;
   line-height: 1.7em;
-  /* border-bottom: 1px dashed black;
-  border-right: 1px dashed black; */
-  /* padding-left: 5vw; */
 }
 
 /*Middle Section: Total city score, random button, and dropdown*/
@@ -63,14 +55,12 @@ h3 {
   color: rgb(29, 22, 50);
 }
 
-#cityinfo {
+#cityInfo {
   text-align: center;
   font-size: 2em;
   width: 40vw;
 }
-#city_summary {
-  font-size: 1em;
-}
+
 #random {
     background-color: darkcyan;
     color: white;
@@ -83,8 +73,7 @@ h3 {
 #random:hover {
   background-color: turquoise;
 }
-#city_description {
-  /*background-color: rgba(239, 245, 245, 0.8);*/
+#cityDescription {
   margin-left: 10vw;
   margin-right: 10vw;
   margin-bottom: 3vh;
@@ -114,32 +103,9 @@ h3 {
   color: darkcyan;
 }
 
-/*Footer*/
-footer {
-  color: rgb(29, 22, 50);
-  font-size: 1.3em;
-  text-align: center;
-  padding-bottom: 5px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  /*background-color: rgba(176, 198, 208, 0.80);*/
-}
-footer a {
-  text-decoration: none;
-  color: rgb(29, 22, 50);
-}
-footer a:hover {
-  color: turquoise;
-}
 /*Media Queries*/
-@media (max-width: 800px) {
-  footer {
-    position: relative;
-  }
-}
-@media (max-width: 732px) {
+/* Adjusting the font size for smaller screens */
+@media (max-width: 600px) {
   #flexbox1 {
     font-size: 1.4em;
   }

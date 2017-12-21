@@ -1,3 +1,4 @@
+/* Styling for the dropdown menu */
 /* Dropdown Button */
 .dropbtn {
     background-color: darkcyan;
@@ -9,13 +10,13 @@
     transition: background-color .8s;
 }
 
-/* The container <div> - needed to position the dropdown content */
-#dropdown_container {
+/* setting up the container for the dropdown */
+#dropdownContainer {
     position: relative;
     display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
+/* Styling the dropdown content and hiding it */
 #dropdown {
     display: none;
     position: absolute;
@@ -41,7 +42,7 @@
 }
 
  /*Show the dropdown menu on hover*/
-#dropdown_container:hover #dropdown {
+#dropdownContainer:hover #dropdown {
     display: block;
 }
 
