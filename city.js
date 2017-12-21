@@ -33,6 +33,7 @@ var url = 'https://api.teleport.org/api/urban_areas/';
 //above outside of that function to use it as the parameter for the API requests below
   var citylist = function(array) {
     var randomCity = array[Math.floor(Math.random()*array.length)];
+    console.log(randomCity);
     teleportAPI(randomCity.href);
     newsAPI(randomCity.name);
     weatherAPI(randomCity.name);
@@ -147,9 +148,10 @@ function newsAPI(city) {
 
        .then(function(data) {
           var results = data.articles;
+          console.log(results);
           document.getElementById("cityname").innerHTML = city
 
-          for(let i = 0; i < 15; i++) {
+          for(let i = 0; i < 6; i++) {
             var link = document.createElement('a');
             link.setAttribute('target','_blank')
             link.href = results[i].url;
@@ -168,12 +170,12 @@ function newsAPI(city) {
 //Weather API Key: Your API Key: e324ec4975e24b42a5dc26acf9346d20
 function weatherAPI(city) {
   var url = 'http://api.weatherbit.io/v2.0/current';
-  let params = {
+  let paramets = {
     city:city,
     key: "e324ec4975e24b42a5dc26acf9346d20"
   }
 
-  var query_url = url + "?" + assembleKey1(params);
+  var query_url = url + "?" + assembleKey1(paramets);
       console.log(query_url);
 
 
