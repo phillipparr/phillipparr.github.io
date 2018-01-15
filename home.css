@@ -22,9 +22,8 @@ body {
   text-align: center;
 }
 /* Styling the start button */
-#start_button {
+#startButton {
   background-color: darkcyan;
-  border-radius: 3px;
   margin-left: 40%;
   margin-top: 10px;
   cursor: pointer;
@@ -34,13 +33,16 @@ body {
   font-size: 14px;
   color: white;
 }
-#start_button a {
+button {
+  border-radius: 3px;
+}
+#startButton a {
   text-align: center;
   text-decoration: none;
   font-size: 1.5em;
   color: black;
 }
-#start_button:hover {
+#startButton:hover {
   color: turquoise;
 }
 /*Footer*/
@@ -61,4 +63,11 @@ footer a {
 }
 footer a:hover {
   color: turquoise;
+}
+@media (max-width: 600px) {
+  #about {
+    max-width: 90vw;
+    height: 60vh;
+    font-size: 1.2em;
+  }
 }

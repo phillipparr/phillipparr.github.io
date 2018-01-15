@@ -8,7 +8,9 @@
 h3 {
   margin: 1px;
 }
-
+h4 {
+  margin: 0 auto;
+}
 /*Top Section: City Scores and Weather*/
 #flexbox1 {
   display: flex;
@@ -69,6 +71,7 @@ h3 {
     cursor: pointer;
     border: none;
     transition: background-color .5s;
+    border-radius: 3px;
 }
 #random:hover {
   background-color: turquoise;
@@ -106,16 +109,11 @@ h3 {
 /*Media Queries*/
 /* Adjusting the font size for smaller screens */
 @media (max-width: 600px) {
-  #flexbox1 {
-    font-size: 1.4em;
+  body {
+    font-size: .7em;
   }
-  #news {
-    font-size: 1.4em
-  }
-  #cityinfo {
-    font-size: 2.4em;
-  }
-  #city_description {
-    font-size: 1.4em;
+  #flexbox2 {
+    margin-left: 1px;
+    margin-right: 1px;
   }
 }
