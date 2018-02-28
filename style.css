@@ -1,0 +1,135 @@
+/*Body - Universal*/
+
+body {
+  font-family: 'Saira Extra Condensed', sans-serif;
+}
+
+/*Footer - Universal*/
+
+.flexwrap {
+  display: flex;
+  background-color: whitesmoke;
+  color: black;
+  width: 100vw;
+  justify-content: space-around;
+  margin-top: 20vh;
+  align-items: baseline;
+}
+
+.flexwrap a {
+  text-decoration: none;
+  color: #373737;
+  text-transform: uppercase;
+  padding-right: 1em;
+}
+
+.flexwrap a:hover {
+  color: lightgray;
+}
+.left a:not(:first-child) {
+  border-left: 1px solid black;
+  padding-left: .2em;
+}
+.center {
+  text-align: center;
+}
+
+
+@media (max-width:865px) {
+  .right h1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .right img {
+    padding-top: 1em;
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .center {
+    max-width: 25vh;
+    padding-right: 2.5em;
+  }
+  .left a:not(:first-child) {
+    border-left: none;
+  }
+}
+
+/*Articles*/
+
+.all {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-top: 4em;
+  padding-bottom: 1em;
+  line-height: 150%;
+  font-size: 1.2em;
+}
+
+p {
+  margin-top: 3vh;
+}
+
+.viz {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3vh;
+}
+@media (max-width:600px) {
+  .all {
+    padding: 1em;
+    font-size: 1.1em;
+  }
+}
+
+
+
+/*Home*/
+
+#content3 {
+  display: flex;
+  flex-direction: column;
+  margin: 3em;
+  font-size: 1.1em;
+}
+
+.person {
+  width: 100%;
+  display: flex;
+  min-height: 40vh;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.person a {
+  text-decoration: none;
+  color: inherit;
+}
+.person a:hover {
+  color: black;
+}
+.person p {
+  width: 60%;
+}
+
+.familytitle {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 865px) {
+  .person {
+    flex-direction: column;
+    margin-top: 5vh;
+  }
+  .person img {
+    order: 1;
+  }
+  .person p {
+    order: 2;
+    width: 100%;
+  }
+}
