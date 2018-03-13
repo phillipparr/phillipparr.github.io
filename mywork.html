@@ -2,9 +2,66 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" media="screen and (min-width: 700px)" href="deskmenu.css">
+    <link rel="stylesheet" media="screen and (max-width: 700px)" href="mobilemenu.css">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script type="text/javascript" src="script.js"></script>
     <title>Phillippa Ramirez</title>
   </head>
   <body>
-
+    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+    <label for="nav-trigger" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </label>
+    <nav class="ntop">
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="resume.html">resume</a></li>
+        <li><a href="mywork.html">my work</a></li>
+      </ul>
+    </nav>
+    <div class="site-wrap">
+      <!-- This is where the unique page content begins. The footer
+  is where the universal content begins again-->
+  <div>
+    <h2 class="familytitle">My Work</h2>
+    <div class="person">
+      <li><a href="article1.html">article 1</a></li>
+      <li><a href="article2.html">article 2</a></li>
+      <h2>Articles</h2>
+    </div>
+    <hr>
+    <div class="person">
+      <h2>Visualizations</h2>
+      <li>Stuff Here</li>
+    </div>
+  </div>
+    <!-- Footer: This is where the universal content begins again -->
+    <footer class="flexwrap">
+      <div class="left">
+        <a href="index.html">home</a>
+        <a href="resume.html">resume</a>
+        <a href="mywork.html">my work</a>
+      </div>
+      <div class="center">
+        <div>Phillippa Ramirez, but you can call me Flip</div>
+      </div>
+      <div class="right">
+        <h1>
+          <a href="https://github.com/phillipparr">
+            <i class="fab fa-github-square"></i>
+          </a>
+          <a href="https://www.instagram.com/yucasla/">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </h1>
+      </div>
+    </footer>
+  </div>
   </body>
 </html>
