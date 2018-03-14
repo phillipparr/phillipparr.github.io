@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- The stylesheet for the main content -->
+    <link rel="stylesheet" href="style.css">
+    <!-- The stylesheet for the dropdown menu -->
+    <link rel="stylesheet" href="dropdown.css">
+    <!-- The stylesheet for the introductory text and start button -->
+    <link rel="stylesheet" href="home.css">
+    <!-- The stylesheet for Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Tag for responsive styling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Snapshot</title>
+  </head>
+  <body>
+    <script src="city.js"></script>
+    <!-- The about section describes how the app works and the information it gives you.
+  This section is hidden once the user clicks the start button -->
+    <section id="about">
+      <h1>Welcome to City Snapshot</h1>
+      <p>City Snapshot provides information about interesting cities around the world.
+        You will find the overall quality of life score (out of 100), specific scores (out of 10)
+        for aspects of that city, such as cost of living, environmental quality, leisure
+        & culture, etc., as well as today's weather, and articles related to the city.
+        By clicking the start button below, City Snapshot will randomly choose a
+        city for you to explore. From there you can continue
+        generating random cities, or choose a city from the list.</p>
+      <button id="startButton" onclick="javascript:showContent();">Start</button>
+    </section>
+<!-- Sectioning out the main content to hide it until the start button is clicked -->
+    <main id="content">
+       <!-- I used flex to position the cityScores and weather sections -->
+      <div id="flexbox1">
+        <!-- Specific city scores section -->
+        <section id="cityScores">
+          <h3><i class="fa fa-info-circle" aria-hidden="true"></i> Scores</h3>
+          <div id='housing'></div>
+          <div id='costOfLiving'></div>
+          <div id='safety'></div>
+          <div id='healthcare'></div>
+          <div id='economy'></div>
+          <div id='environmentalQuality'></div>
+          <div id='leisureCulture'></div>
+        </section>
+        <!-- Weather section -->
+        <section id="weather">
+          <h3><i class="fa fa-thermometer-half" aria-hidden="true"></i> Weather</h3>
+          <div id="temp"></div>
+          <div id="description"></div>
+          <div id="rain"></div>
+          <div id="windSpeed"></div>
+          <div id="windDir"></div>
+          <div id="sunrise"></div>
+          <div id="sunset"></div>
+          <div id="dateTime"></div>
+        </section>
+
+      </div>
+      <!-- I sectioned out the central section to style the background -->
+      <!-- This section includes the name of the city, the city's overall score,
+      the description of the city, and the random button and dropdown menu-->
+      <section id="section2">
+        <div id="flexbox2">
+          <button id="random">Random</button>
+
+          <div id="cityInfo">
+             <h4 id='cityName'></h4>
+             <div id='totalCityScore'></div>
+
+          </div>
+
+          <div id=dropdownContainer>
+            <button class="dropbtn">Cities</button>
+            <div id="dropdown"></div>
+          </div>
+
+        </div>
+        <div id="cityDescription"></div>
+      </section>
+      <!-- The bottom section shows the news headlines -->
+      <div id="flexbox3">
+        <section id="news">
+          <h3><i class="fa fa-rss" aria-hidden="true"></i> Headlines</h3>
+          <div id="article1"></div>
+          <div id="article2"></div>
+          <div id="article3"></div>
+          <div id="article4"></div>
+          <div id="article5"></div>
+          <div id="article6"></div>
+        </section>
+      </div>
+    </main>
+<!-- I had to give the footer an id because selecting by tag name to hide the footer "onclick"
+wasn't working -->
+    <footer id="footer">City Snapshot was built using <a href="https://teleport.org/my-cities/">Teleport</a>
+      , <a href="https://newsapi.org/">NewsAPI</a>, and
+      <a href="https://www.weatherbit.io/api/weather-current">Weatherbit</a>
+    </footer>
+  </body>
+</html>
