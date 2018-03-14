@@ -96,7 +96,7 @@ p {
   font-size: 1.1em;
 }
 
-.person {
+.section {
   width: 100%;
   display: flex;
   min-height: 40vh;
@@ -104,32 +104,41 @@ p {
   justify-content: space-around;
 }
 
-.person a {
+.section a {
   text-decoration: none;
   color: inherit;
 }
-.person a:hover {
+.section a:hover {
   color: black;
 }
-.person p {
+.section p {
   width: 60%;
 }
 
-.familytitle {
+.title {
   text-align: center;
   text-transform: uppercase;
 }
 
 @media (max-width: 865px) {
-  .person {
+  .section {
     flex-direction: column;
     margin-top: 5vh;
   }
-  .person img {
+  .section img {
     order: 1;
   }
-  .person p {
+  .section p {
     order: 2;
     width: 100%;
   }
+}
+
+/* My Work */
+.work {
+  list-style: none;
+}
+
+.links {
+  display: block;
 }
