@@ -1,0 +1,87 @@
+.ntop {
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  list-style: none;
+  background: rgb(15, 6, 0);
+}
+
+.ntop a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: rgb(241, 248, 249);
+  font-size: 1.3em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.ntop a:hover {
+  color: #5cbd83;
+}
+
+.site-wrap {
+  min-width: 100%;
+  min-height: 100vh;
+  background-color: whitesmoke;
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
+  color: #373737;
+}
+
+.nav-trigger {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+label[for="nav-trigger"] {
+  position: absolute;
+  left: 2vw;
+  top: 2vh;
+  z-index: 2;
+}
+
+label[for="nav-trigger"] div {
+  width: 35px;
+  height: 5px;
+  background-color: rgb(40, 40, 42);
+  margin: 6px 0;
+  transition: .7s;
+}
+
+.change .bar1 {
+  transform: rotate(-405deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: rotate(405deg) translate(-8px, -8px);
+}
+
+.nav-trigger+label, .site-wrap {
+  transition: left 0.4s;
+}
+
+.nav-trigger:checked+label {
+  left: 17vw;
+}
+
+.nav-trigger:checked~.site-wrap {
+  left: 15vw;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

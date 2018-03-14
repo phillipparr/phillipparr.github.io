@@ -1,0 +1,411 @@
+/*Body - Universal*/
+
+body {
+  font-family: 'Saira Extra Condensed', sans-serif;
+}
+
+/*Banner - Universal*/
+
+.img-holder a {
+  position: absolute;
+  left: 48%;
+  top: 87vh;
+  font-size: 2em;
+  color: #373737;
+}
+.img-holder a:hover {
+  color: lightgray;
+}
+
+img.banner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100vh;
+  box-shadow: 0 5px 5px -5px #333;
+  top: 0;
+}
+.ntop ul {
+  list-style: none;
+}
+@media (max-width:600px) {
+  img.banner {
+    height: 50vh;
+  }
+  .img-holder a {
+    display: none;
+  }
+}
+
+/*Footer - Universal*/
+
+.flexwrap {
+  display: flex;
+  background-color: whitesmoke;
+  color: black;
+  width: 100vw;
+  justify-content: space-around;
+  margin-top: 20vh;
+  align-items: baseline;
+}
+
+.flexwrap a {
+  text-decoration: none;
+  color: #373737;
+  text-transform: uppercase;
+  padding-right: 1em;
+}
+
+.flexwrap a:hover {
+  color: lightgray;
+}
+.left a:not(:first-child) {
+  border-left: 1px solid black;
+  padding-left: .2em;
+}
+.center {
+  text-align: center;
+}
+
+
+@media (max-width:865px) {
+  .right h1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .right img {
+    padding-top: 1em;
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .center {
+    max-width: 25vh;
+    padding-right: 2.5em;
+  }
+  .left a:not(:first-child) {
+    border-left: none;
+  }
+}
+
+/*Home Page*/
+
+.all {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-top: 4em;
+  padding-bottom: 1em;
+  line-height: 150%;
+  font-size: 1.2em;
+}
+
+.cflex {
+  display: flex;
+  margin-top: 10vh;
+  align-items: center;
+}
+
+.goleft {
+  margin-right: 4em;
+}
+
+.goright a {
+  color: black;
+}
+.goright a:hover {
+  color: lightgray;
+}
+.goright i {
+  padding-top: .3em;
+}
+.third {
+  margin-top: 10vh;
+}
+
+.fourth {
+  margin-top: 10vh;
+}
+
+@media (max-width:600px) {
+  .all {
+    padding: 1em;
+    font-size: 1.1em;
+  }
+}
+
+/*Press page*/
+
+#content2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  width: 100vw;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+}
+
+.review {
+  width: 45%;
+  max-height: 30vh;
+  padding-top: 2em;
+}
+
+.review img {
+  max-width: 90%;
+  max-height: 80%
+}
+
+@media (max-width:700px) {
+  #content2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .review {
+    width: 90%;
+  }
+}
+
+/*Family Page*/
+
+#content3 {
+  display: flex;
+  flex-direction: column;
+  margin: 3em;
+  font-size: 1.1em;
+}
+
+.person {
+  width: 100%;
+  display: flex;
+  min-height: 40vh;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.person p {
+  width: 60%;
+}
+
+.familytitle {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 865px) {
+  .person {
+    flex-direction: column;
+    margin-top: 5vh;
+  }
+  .person img {
+    order: 1;
+  }
+  .person p {
+    order: 2;
+    width: 100%;
+  }
+}
+
+/*Contact Page*/
+
+#content5 {
+  padding: 4em;
+  font-size: 1.1em;
+}
+
+.flexbody {
+  display: flex;
+  justify-content: center;
+}
+
+.list {
+  list-style: none;
+  padding-left: 3em;
+  padding-top: 3em;
+}
+
+.pande a {
+  color: black;
+}
+
+.pande a:hover {
+  color: lightgray;
+}
+.map {
+  width: 50%;
+}
+
+@media (max-width:650px) {
+  .flexbody {
+    display: flex;
+    flex-direction: column;
+  }
+  .list {
+    text-align: center;
+    padding-left: 0;
+  }
+  #content5 {
+    padding: 1em;
+  }
+  .map {
+    width: 100%;
+  }
+}
+
+/*Menu Page*/
+
+/*Down arrow link just for the menu page because this is
+the only one that should still be displayed in mobile
+because of the parallax scrolling on this page*/
+
+.img-holdermenu a {
+  position: absolute;
+  right: 47%;
+  top: 90vh;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+  border-top: 5px solid black;
+}
+
+.section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f4f4f4;
+}
+
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: -1;
+}
+
+.static {
+  background: #dcd0c0;
+  height: 70vh;
+  border-radius: 5px;
+  justify-content: space-around;
+  flex-direction: column;
+  color: #373737;
+}
+
+.static span {
+  padding-left: 2em;
+  padding-right: 2em;
+  color: #373737;
+  font-size: 1.3em;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.static a {
+  text-transform: uppercase;
+  color: #373737;
+  font-size: 2em;
+  text-decoration: none;
+}
+.static a:hover {
+  color: #c0b283;
+}
+.section .menuheading {
+  font-size: 4.5em;
+  text-shadow: 4px 4px 3px rgba(44, 46, 47, 0.82);
+}
+
+.static h4 {
+  font-size: 1.1em;
+}
+
+.bg1::after {
+  background-image: url('images/window.jpg');
+  background-size: cover;
+}
+
+.bg2::after {
+  background-image: url('images/pibil.jpg');
+  background-size: cover;
+}
+
+.bg3::after {
+  background-image: url('images/burritos1.jpg');
+  background-size: cover;
+}
+
+.bg4::after {
+  background-image: url('images/tortas.jpg');
+  background-size: cover;
+}
+
+.bg5::after {
+  background-image: url('images/burger.jpg');
+  background-size: cover;
+}
+
+.bg6::after {
+  background-image: url('images/alltacos.jpg');
+  background-size: cover;
+}
+
+.bg7::after {
+  background-image: url('images/drinks.jpg');
+  background-size: cover;
+}
+
+.bg8::after {
+  background-image: url('images/sign copy.jpg');
+  background-size: cover;
+}
+
+.bg8 h2 a{
+  text-decoration: none;
+  color: #f4f4f4;
+  text-transform: capitalize;
+}
+.bg8 h2 a:hover {
+  color: #c0b283;
+}
+@media (max-width: 600px) {
+  .img-holdermenu a {
+    position: absolute;
+    right: 45%;
+    top: 40vh;
+  }
+}
+
+@media (max-width:800px) {
+  .links {
+    display: flex;
+    flex-direction: column;
+  }
+  .static {
+    font-size: .7em;
+  }
+  .static h2 {
+    text-align: center;
+  }
+  .static h3 {
+    display: flex;
+    flex-direction: column;
+  }
+}
