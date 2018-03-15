@@ -87,7 +87,7 @@ p {
 
 
 
-/*Home*/
+/*Multiple Pages*/
 
 #content3 {
   display: flex;
@@ -141,4 +141,17 @@ p {
 
 .links {
   display: block;
+}
+
+/* Home */
+.about {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 5vh;
+}
+.about p {
+  width: 40%;
+}
+.bio {
+  max-width: 90vw;
 }
