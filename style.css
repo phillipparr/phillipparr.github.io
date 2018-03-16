@@ -155,3 +155,10 @@ p {
 .bio {
   max-width: 90vw;
 }
+
+#contact ul {
+  text-align: center;
+  margin: 0 auto;
+  list-style: none;
+  margin-top: 20vh;
+}
