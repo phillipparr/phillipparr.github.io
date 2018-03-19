@@ -9,6 +9,10 @@
   background: #fefefe;
 }
 
+.ntop ul {
+  list-style: none;
+}
+
 .ntop a {
   text-decoration: none;
   display: block;
