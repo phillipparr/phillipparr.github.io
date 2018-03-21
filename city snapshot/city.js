@@ -40,7 +40,7 @@ var url = "https://api.teleport.org/api/urban_areas/";
       var randomCity = array[Math.floor(Math.random()*array.length)];
       teleportAPI(randomCity.href);
       newsAPI(randomCity.name);
-      weatherAPI(randomCity.name);
+      // weatherAPI(randomCity.name);
     });
   };
 // Dropdown menu of all the possible cities
@@ -52,7 +52,7 @@ function dropdown (cities) {
     menuItem.addEventListener("click", function(){
       teleportAPI(cities[i].href);//calling the API functions to get data when a city is chosen from the list
       newsAPI(cities[i].name);
-      weatherAPI(cities[i].name);
+      // weatherAPI(cities[i].name);
     });
   }
 
@@ -155,38 +155,38 @@ function newsAPI (city) {
         });
   }
 //Weatherbit API
-function weatherAPI (city) {
-  var url = "http://api.weatherbit.io/v2.0/current";
-  let params = {
-    city:city,
-    key: "e324ec4975e24b42a5dc26acf9346d20"
-  };
-
-  var query_url = url + "?" + assembleKey(params);
-     console.log(query_url);
-// API request
-     fetch (query_url)
-        .then(function(response) {
-          return response.json();
-        })
-
-       .then (function(data) {
-          //The next eight lines get specific weather data
-          var temp = data.data[0].app_temp;
-          var description = data.data[0].weather.description;
-          var windSpeed = data.data[0].wind_spd;
-          var windDir = data.data[0].wind_cdir;
-          var precip=data.data[0].precip;
-          var sunrise = data.data[0].sunrise;
-          var sunset=data.data[0].sunset;
-          var dateTime=data.data[0].ob_time;
-          //The next seven lines print the weather data to the page
-          document.getElementById("temp").innerHTML = "Temperature: " + temp + " Celsius";
-          document.getElementById("description").innerHTML = "Description: " + description;
-          document.getElementById("rain").innerHTML = "Precipitation: " + precip + " mm";
-          document.getElementById("windSpeed").innerHTML = "Wind Speed: " + windSpeed + " m/s " + windDir;
-          document.getElementById("sunrise").innerHTML = "Sunrise: " + sunrise + " GMT";
-          document.getElementById("sunset").innerHTML = "Sunset: " + sunset + " GMT";
-          document.getElementById("dateTime").innerHTML = "Date & Time: " + dateTime;
-        });
-}
+// function weatherAPI (city) {
+//   var url = "http://api.weatherbit.io/v2.0/current";
+//   let params = {
+//     city:city,
+//     key: "e324ec4975e24b42a5dc26acf9346d20"
+//   };
+//
+//   var query_url = url + "?" + assembleKey(params);
+//      console.log(query_url);
+// // API request
+//      fetch (query_url)
+//         .then(function(response) {
+//           return response.json();
+//         })
+//
+//        .then (function(data) {
+//           //The next eight lines get specific weather data
+//           var temp = data.data[0].app_temp;
+//           var description = data.data[0].weather.description;
+//           var windSpeed = data.data[0].wind_spd;
+//           var windDir = data.data[0].wind_cdir;
+//           var precip=data.data[0].precip;
+//           var sunrise = data.data[0].sunrise;
+//           var sunset=data.data[0].sunset;
+//           var dateTime=data.data[0].ob_time;
+//           //The next seven lines print the weather data to the page
+//           document.getElementById("temp").innerHTML = "Temperature: " + temp + " Celsius";
+//           document.getElementById("description").innerHTML = "Description: " + description;
+//           document.getElementById("rain").innerHTML = "Precipitation: " + precip + " mm";
+//           document.getElementById("windSpeed").innerHTML = "Wind Speed: " + windSpeed + " m/s " + windDir;
+//           document.getElementById("sunrise").innerHTML = "Sunrise: " + sunrise + " GMT";
+//           document.getElementById("sunset").innerHTML = "Sunset: " + sunset + " GMT";
+//           document.getElementById("dateTime").innerHTML = "Date & Time: " + dateTime;
+//         });
+// }

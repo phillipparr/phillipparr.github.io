@@ -12,25 +12,26 @@ h4 {
   margin: 0 auto;
 }
 /*Top Section: City Scores and Weather*/
-#flexbox1 {
+/* #flexbox1 {
   display: flex;
   justify-content: space-between;
   margin-right: 10vw;
   margin-left: 10vw;
   color: rgb(29, 22, 50);
-}
+} */
 
 #cityScores {
   width: 35vw;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   background-color: rgba(239, 245, 245, 0.8);
   border-radius: 8px;
   text-align: center;
   line-height: 1.7em;
+  margin: auto;
 }
 
-#weather {
+/* #weather {
   display: flex;
   flex-direction: column;
   background-color: rgba(239, 245, 245, 0.8);
@@ -38,7 +39,7 @@ h4 {
   width: 35vw;
   text-align: center;
   line-height: 1.7em;
-}
+} */
 
 /*Middle Section: Total city score, random button, and dropdown*/
 #section2 {
