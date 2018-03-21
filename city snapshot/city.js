@@ -35,7 +35,7 @@ var url = "https://api.teleport.org/api/urban_areas/";
     console.log(randomCity);
     teleportAPI(randomCity.href);//the list of cities returns a url which is used for this API
     newsAPI(randomCity.name);//just the name of the city is required for this API
-    weatherAPI(randomCity.name);//just the name of the city is required for this API
+    // weatherAPI(randomCity.name);//just the name of the city is required for this API
     document.getElementById("random").addEventListener("click", function(){//this gives you a new random city when you click the random button
       var randomCity = array[Math.floor(Math.random()*array.length)];
       teleportAPI(randomCity.href);
