@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UK Unemployment Rate</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.6.0/d3.js"></script>
+    <style>
+    #vis {
+        margin: 0;
+    }
+
+    .tooltip {
+        position: absolute;
+    }
+
+    .tooltip p {
+        background-color: white;
+        border: grey 1px solid;
+        padding: 2px;
+        font-family: sans-serif;
+        font-size: 11px;
+    }
+</style>
+</head>
+<body>
+    <div id="vis">
+
+    </div>
+    <script>
+        var width = 800;
+        var height = 500;
+
+        var margin = {
+            top: 10,
+            bottom: 100,
+            left: 100,
+            right: 120
+        };
+
+        var svg = d3.select('#vis')
+            .append('svg')
+            .attr('width', width)
+            .attr('height', height)
+            .append('g')
+            .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+        var tooltip = d3.select('body')
+            .append('div')
+            .attr('class', 'tooltip');
+
+        width = width - margin.left - margin.right;
+        height = height - margin.top - margin.bottom;
+
+        var dateParse = d3.timeParse('%Y');
+        var tooltipFormat = d3.timeFormat('%Y');
+
+        var x_scale = d3.scaleTime()
+            .range([0, width]);
+
+        var y_scale = d3.scaleLinear()
+            .range([height, 0]);
+
+        var band_scale = d3.scaleBand()
+            .range([0, width]);
+
+        var line = d3.line()
+            .x(function(d) {
+                return x_scale(d.Year);
+
+            })
+            .y(function(d) {
+                return y_scale(+d.Expenditure);
+
+            })
+            .curve(d3.curveLinear);
+
+          
+
+
+        var x_axis = d3.axisBottom()
+            .scale(x_scale);
+
+        var y_axis = d3.axisLeft()
+            .scale(y_scale);
+
+        d3.csv('MiddleEastUSD(totalregional).csv', function(d) {
+          d.Year = dateParse(d.Year);
+
+          d.Expenditure = +d.Expenditure;
+          // console.log(d.Percentage);
+          return d;
+        }, function(error, data) {
+          if (error) throw error;
+
+
+
+            x_scale.domain(d3.extent(data, function(d) { console.log(d.Year);
+                return d.Year;
+            }))
+
+            y_scale.domain([0, d3.max(data, function(d) {console.log(d.Expenditure);
+                return d.Expenditure;
+            })]);
+
+            band_scale.domain(data.map(function(d) {
+                return d.Year;
+            }));
+
+            var lines = svg.selectAll('.line')
+                .data([data]);
+
+            lines
+                .enter()
+                .append('path')
+                .attr('class', 'line')
+                .attr('fill', 'none')
+                .attr('stroke', 'red')
+                .attr('d', line);
+
+
+            var bars = svg.selectAll('.bar')
+                .data(data);
+
+            bars
+                .enter()
+                .append('rect')
+                .attr('class', 'bar')
+                .attr('x', function(d) {
+                    return band_scale(d.Year);
+                })
+                .attr('width', band_scale.bandwidth())
+                .attr('height', height)
+                .attr('y', 0)
+                .attr('fill', 'rgb(215, 215, 215)')
+                .attr('opacity', 0)
+                .on('mouseover', mouseOver)
+                .on('mousemove', mouseMove)
+                .on('mouseout', mouseOut);
+
+            svg.append('g')
+                .attr('transform', 'translate(0, ' + height + ')')
+                .call(x_axis)
+                .append("text")
+        				// .attr("transform", "rotate(-90)")
+        				.attr("y", 20)
+        				.attr("x", 310)
+        				.attr("dy", "0.9em")
+        				.attr("fill", "#000")
+        				.text("Year");
+
+            svg.append('g')
+                .call(y_axis)
+                .call(d3.axisLeft(y))
+        				.append("text")
+        				.attr("transform", "rotate(-90)")
+        				.attr("y", -50)
+        				.attr("x", -125)
+        				.attr("dy", "0.9em")
+        				.attr("fill", "#000")
+        				.text("Military expenditure (million $)");
+
+            function mouseOver(d) {
+                console.log(d);
+                var date = d.Year;
+                var displayDate = tooltipFormat(date);
+
+                d3.select(this)
+                    .style('opacity', 0.6)
+
+                tooltip
+                    .style('display', null)
+                    .html('<p>Date: ' + displayDate + '<br>Military expenditure: ' + d.Expenditure + 'million $</p>');
+            };
+
+            function mouseMove(d) {
+                tooltip
+                    .style('top', (d3.event.pageY - 20) + "px")
+                    .style('left', (d3.event.pageX + 20) + "px");
+            };
+
+            function mouseOut(d) {
+                d3.select(this)
+                    .style('opacity', 0)
+
+                tooltip
+                    .style('display', 'none');
+            };
+        })
+    </script>
+
+</body>
+</html>

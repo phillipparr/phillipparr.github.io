@@ -1,0 +1,56 @@
+#title {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.country-boundary {
+  fill: none;
+  stroke: #777;
+  stroke-dasharray: 2,2;
+  stroke-linejoin: round;
+}
+
+.country-boundary.IRL {
+  stroke: #aaa;
+}
+.bar {
+  fill: #0570b0;
+}
+.bar:hover {
+  fill: #023858;
+}
+
+
+/* Slider */
+input[type=range]{
+-webkit-appearance: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+width: 500px;
+height: 5px;
+background: #ddd;
+border: none;
+border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+-webkit-appearance: none;
+border: none;
+height: 16px;
+width: 16px;
+border-radius: 50%;
+background: goldenrod;
+margin-top: -4px;
+}
+
+input[type=range]:focus {
+outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+background: #ccc;
+}
+
+.sliderContainer {
+width:100%;
+}

@@ -1,0 +1,78 @@
+#main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+#list {
+  margin-left: 1em;
+}
+
+header {
+  padding-left: 4em;
+}
+
+
+
+.line {
+  fill: none;
+  /* stroke: steelblue; */
+  stroke-width: 2em;
+}
+
+.button {
+  font-size: 2em;
+  width: 7em;
+  height: auto;
+  margin-right: 0.5em;
+}
+
+.total {
+  width: 4.5em;
+
+}
+
+
+/* .axis{
+ font-size: 30px;
+} */
+
+#menu {
+  display: flex;
+  flex-direction:column;
+  align-items: flex-end;
+  margin-left: 4.2em;
+  margin-right: 0;
+  margin-top: 0.5em;
+  width: 12em;
+}
+
+li {
+    font-weight:bold;
+    line-height: 1em;
+    list-style-type: none;
+    margin-left: 1em;
+    padding: 0;
+    width: 220px;
+    background-color: #f1f1f1;
+    display: block;
+    color: #000;
+    padding: 8px 2px 8px 8px;
+    text-decoration: none;
+}
+
+input[type=checkbox] {
+    transform: scale(2);
+    -ms-transform: scale(2);
+    -webkit-transform: scale(2);
+    margin: 0 0.5em 0.5em 0.5em;
+    padding: 10px;
+}
+
+.line {
+  /* fill:#F00; */
+  stroke-width:2;
+  fill: none;
+  /* stroke: steelblue;
+  stroke-width: 2px; */
+}

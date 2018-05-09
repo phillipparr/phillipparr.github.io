@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaflet GeoJSON Example</title>
+    <meta charset="utf-8" />
+
+    <!-- <style type="text/css">
+        .leaflet-container{background-color:#c5e8ff;}
+    </style> -->
+    <script src="//d3js.org/d3.v4.min.js" charset="utf-8"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <link rel="stylesheet" href="map.css">
+
+
+</head>
+
+<body>
+<script>
+
+  var width = 960,
+      height = 700;
+
+  var svg = d3.select("body").append("svg")
+      .attr("width", width)
+      .attr("height", height);
+
+
+  d3.json("world.json", function(error, world) {
+    if (error) return console.error(error);
+
+    var countries = topojson.feature(world, world.objects.countries);
+
+    var projection = d3.geoMercator()
+      .center([0, 55.4])
+      .rotate([4.4, 0])
+      .scale(150)
+      .translate([width / 2, height / 2]);
+
+    var path = d3.geoPath()
+      .projection(projection);
+
+    svg.append("path")
+      .datum(countries)
+      .attr("d", path);
+
+  svg.selectAll(".Country")
+      .data(topojson.feature(world, world.objects.countries).features)
+    .enter().append("path")
+      .attr("class", function(d) { return "country " + d.id; })
+      .attr("d", path);
+
+  svg.append("path")
+    .datum(topojson.mesh(world, world.objects.countries, function(a, b) { return a !== b && a.id !== "IRL"; }))
+    .attr("d", path)
+    .attr("class", "country-boundary");
+
+  });
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="http://d3js.org/d3.v4.min.js"></script>
+    <style media="screen">
+
+
+    </style>
+  </head>
+  <body>
+
+    <p>Woooooo</p>
+
+    <div class="vis">
+
+    </div>
+
+
+    <script type="text/javascript">
+
+
+      var dataset;
+      var w = 960;
+      var h = 700;
+      var padding = 50;
+
+        var rowConverter = function(d) {
+          return {
+            Country: d.Country,
+            Year: parseFloat(d.Year),
+            Expenditure_per_cap: parseFloat(d.Expenditure_per_cap),
+            "GDP per capita": parseFloat(d["GDP per capita"])
+          };
+        }
+
+        d3.csv("Arms.csv", rowConverter, function(data){
+
+          dataset = data;
+
+//how to change it so it goes by years
+          var year = []
+          for (i=0; i <dataset.length; i++) {
+            if (dataset[i].Year == '2016') {
+              year.push(dataset[i]);
+            }
+          };
+          console.log(year);
+
+
+
+
+
+          var xscale = d3.scaleLinear()
+            .domain([0, d3.max(year, function(d){ return d["GDP per capita"]})])
+            .range([padding, w - padding]);
+
+          var yscale = d3.scaleLinear()
+            .domain([0, d3.max(year, function(d){ return d.Expenditure_per_cap})])
+            .range([h - padding, padding]);
+
+          var rscale =d3.scaleLinear()
+            .domain([0, d3.max(year, function(d){
+              return d.Expenditure_per_cap;
+            })])
+            .range([2, 8]);
+
+          var xAxis = d3.axisBottom()
+            .scale(xscale)
+            .ticks(6)
+
+          var yAxis = d3.axisLeft()
+            .scale(yscale)
+            .ticks(6)
+
+
+          var svg = d3.select('body')
+            .append('svg')
+            .attr('width', w)
+            .attr('height', h)
+
+
+
+
+
+
+
+          svg.selectAll('circle')
+            .data(year)
+            .enter()
+            .append('circle')
+            .attr('cx', function(d){
+              return xscale(d["GDP per capita"]);
+            })
+            .attr('cy', function(d){
+              return yscale(d.Expenditure_per_cap);
+            })
+            .attr('r', function(d) {
+              return rscale(d.Expenditure_per_cap);
+            });
+
+          //here we can label the dots according to certain criteria
+          // svg.selectAll('text')
+          //   .data(year)
+          //   .enter()
+          //   .append('text')
+          //   .text(function(d){
+          //     return d.Percent_of_GOV_SPENDING
+          //   })
+
+
+            svg.append('g')
+              .attr('class', 'y axis')
+              .attr('transform', 'translate(' + padding +',0)')
+              .call(yAxis);
+
+            svg.append('g')
+              .attr('class', 'x axis')
+              .attr('transform', 'translate(0,' + (h-padding) +')')
+              .call(xAxis);
+
+            svg.append("text")
+              .attr("transform",
+                    "translate(" + (padding -35) + " ," +
+                        (h/2) + ")rotate(-90)")
+              .attr("text-anchor", "middle")
+              .text("Innuit Buttercups");
+
+
+            svg.append('text')
+              .attr('transform',
+                    "translate(" + (w/2) + "," + (h-(padding/3)) + ")")
+              .attr('text-anchor', 'middle')
+              .text('GDP per capita')
+
+
+
+
+            d3.select('p')
+              .on('click', function(d){
+
+                var y2015 = []
+                for (i=0; i <dataset.length; i++) {
+                  if (dataset[i].Year == '2015') {
+                    y2015.push(dataset[i]);
+                }
+                };
+
+                gdpPerCapita=[]
+                Expenditure=[]
+                for(i=0; i<y2015.length; i++){
+                  gdpPerCapita.push(y2015[i]['GDP per capita']);
+                  Expenditure.push(y2015[i].Expenditure_per_cap);
+                }
+                console.log(gdpPerCapita)
+
+
+					      yscale.domain([0, d3.max(y2015, function(d) { return d.Expenditure_per_cap; })]);
+                xscale.domain([0, d3.max(y2015, function(d){ return d['GDP per capita'];})])
+
+                svg.selectAll('circle')
+                  .data(y2015)
+
+
+                  .attr('cx', function(d){
+                    return xscale(d["GDP per capita"]);
+                  })
+                  .attr('cy', function(d){
+                    return yscale(d.Expenditure_per_cap);
+                  })
+                  .attr('r', function(d) {
+                    return rscale(d.Expenditure_per_cap);
+                  });
+
+
+
+              svg.select('.x.axis')
+                .transition()
+                .duration(1000)
+                .call(xAxis);
+
+              svg.select('.y.axis')
+                .transition()
+                .duration(1000)
+                .call(yAxis);
+
+
+
+
+              })
+
+        });
+
+
+
+
+
+
+    </script>
+
+  </body>
+</html>

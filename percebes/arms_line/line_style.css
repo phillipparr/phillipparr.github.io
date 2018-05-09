@@ -1,0 +1,44 @@
+#main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+#menu {
+  display: flex;
+  flex-direction:column;
+  width: 50px;
+}
+
+/*
+#charts{
+  display: flex;
+  flex-direction:column;
+} */
+header {
+  padding-left: 3em;
+}
+
+
+li {
+    /* font-size: 12px; */
+    line-height: 12px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+
+.line {
+  /* fill:#F00; */
+  stroke-width:2;
+  fill: none;
+  /* stroke: steelblue;
+  stroke-width: 2px; */
+}
