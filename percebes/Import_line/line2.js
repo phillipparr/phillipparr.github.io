@@ -99,7 +99,7 @@
 
   function Total(){
     // get the dataset.
-    d3.csv("Import_line (latest)/Middle East Imports.csv",  rowConverter,function(data){
+    d3.csv("Import_line/Middle East Imports.csv",  rowConverter,function(data){
 
         // console.log(data);
     //converting the dataset
