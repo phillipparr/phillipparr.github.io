@@ -50,6 +50,11 @@ h3 {
   display: flex;
   justify-content: center;
 }
+
+div {
+  max-width: 99vw;
+  margin: auto;
+}
 /* Vicky's Graph */
 #main {
   display: flex;
